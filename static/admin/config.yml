@@ -1,0 +1,81 @@
+backend:
+  name: git-gateway
+  branch: master
+  accept_roles:
+    - admin
+
+site: https://revolver-inc.netlify.com/
+
+media_folder: static/assets
+public_folder: /assets
+
+collections:
+  
+  # Static Pages
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/pages/index.md"
+        label: "Landing Page"
+        name: "Index Page"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
+          - {label: Title, name: title, widget: string}
+          - {label: Heading, name: heading, widget: string}
+          - {label: Subheading, name: subheading , widget: string}
+          - {label: Main Page Body, name: body, widget: markdown}
+          - {label: Featured Image, name: featuredImage, widget: image}
+
+  #     - file: "src/pages/contact.md"
+  #       label: "Contact Page"
+  #       name: "contact"
+  #       fields:
+  #         - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact-page"}
+  #         - {label: Title, name: title, widget: string}
+  #         - {label: Heading, name: heading, widget: string}
+  #         - {label: Contact Body, name: body, widget: markdown}
+
+  # # dynamic pages
+  # - name: "news"
+  #   label: "News Post"
+  #   folder: "src/pages/news/"
+  #   create: true
+  #   slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+  #   fields:
+  #     - {label: "Template Key", name: "templateKey", widget: "hidden", default: "news-post"}
+  #     - {label: "Title", name: "title", widget: "string"}
+  #     - {label: "Publish Date", name: "date", widget: "datetime"}
+  #     - {label: "Tagline", name: "tagline", widget: "text", required: false, hint: "If no tagline provided, article excerpt will be used instead."}
+  #     - {label: "Body", name: "body", widget: "markdown"}
+  #     - {label: "Tags", name: "tags", widget: "list"}
+
+
+  # - name: "members"
+  #   identifier_field: name
+  #   label: "Members"
+  #   folder: src/data/members
+  #   create: true
+  #   extension: json
+  #   format: json
+  #   slug: "{{slug}}"
+  #   fields:
+  #     - {label: "Image", name: "image", widget: "image", default: "/assets/default-user.png"}
+  #     - {label: "Name", name: "name", widget: "string"}
+  #     - {label: "Position", name: "position", widget: "string"}
+  #     - {label: "Bio", name: "bio", widget: "text"}
+
+     
+  # - name: "projects"
+  #   identifier_field: name
+  #   label: "Projects"
+  #   folder: src/data/projects
+  #   create: true
+  #   extension: json
+  #   format: json
+  #   slug: "{{slug}}"
+  #   fields:
+  #     - {label: "Image", name: "image", widget: "image", default: "/assets/default-project.png"}
+  #     - {label: "Name", name: "name", widget: "string"}
+  #     - {label: "Author", name: "author", widget: "string"}
+  #     - {label: "Description", name: "description", widget: "text"} 
+  #     - {label: "Link", name: "link", widget: "string", hint: "Enter the link to your project homepage / git repo"} 
