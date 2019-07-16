@@ -14,7 +14,7 @@ const IndexPageTemplate = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" keywords={[`Game Creator's Space`, `GCS`, `NAIT`]} />
-      <section className="marquee">
+      <section>
         <h1>{title}</h1>
       </section>
       <div
