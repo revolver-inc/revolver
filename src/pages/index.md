@@ -1,8 +1,9 @@
 ---
 templateKey: index-page
 title: Revolver
-heading: Music, Movies etc.
+heading: Welcome to Revolver
 ---
 
-Lorem ipsum dolor sit amet, putent semper docendi ea sit, soleat voluptatum has in. Commodo legimus ponderum vix ut, per malorum corpora at. Vel id animal civibus intellegebat, probo aeterno delenit id vel, graecis gubergren deseruisse ex sea. Eos ad iriure tractatos. At eam fastidii indoctum, nec oportere interesset et, diam aeque similique has in. No mei novum option.
+Revolver Music is the largest independent chain of record stores in the Edmonton area. We buy your old records! Come check out our exciting collection of music, movies and pop culture paraphanelia.
 
+We buy old records, cd’s and movies!

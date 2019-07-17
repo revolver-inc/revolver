@@ -8,10 +8,13 @@
 @import "components/buttons";
 @import "components/footer";
 
+@import "pages/home";
+
 
 .site-header {
   background-image: url(../../img/header-bg.png), linear-gradient(rgb(88, 85, 83), sandybrown);
   background-size: cover;
+  z-index: 99;
 }
 main {
   min-height: 100vh;

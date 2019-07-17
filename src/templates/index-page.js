@@ -14,13 +14,18 @@ const IndexPageTemplate = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" keywords={[`Game Creator's Space`, `GCS`, `NAIT`]} />
-      <section>
-        <h1>{title}</h1>
+      <section className="home-intro">
+        <Image name="record-store.png" />
+        {/* <h1>{title}</h1> */}
+        <div className="intro-content">
+          <h3>{heading}</h3>
+          <div dangerouslySetInnerHTML={{ __html: html }} />
+        </div>
       </section>
-      <div
+      {/* <div
         className="main-content"
         dangerouslySetInnerHTML={{ __html: html }}
-      />
+      /> */}
     </Layout>
   )
 }
