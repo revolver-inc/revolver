@@ -1,0 +1,17 @@
+.site-nav a{
+  transition: all ease-in .1s;
+  text-decoration: none;
+  color: #222;
+  &:visited{
+    color: #222;
+  }
+
+  &:hover {
+    color: rgb(248, 246, 246);
+  }
+}
+
+.brand-container a, .brand-container a:visited {
+  color: rgb(17, 17, 17);
+  text-decoration: none;
+}

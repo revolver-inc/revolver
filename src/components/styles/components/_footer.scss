@@ -1,0 +1,27 @@
+.site-footer {
+  background: #CEA76B;
+  .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+  .footer-logo {
+    width: 372px;
+    margin-bottom: 1rem;
+  }
+  }
+}
+
+.footer-nav {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.social-icons {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+}

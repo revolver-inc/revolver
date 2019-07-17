@@ -4,11 +4,29 @@
 @import "variables";
 @import "containers";
 @import "components/header";
+@import "components/links";
+@import "components/buttons";
+@import "components/footer";
 
+
+.site-header {
+  background-image: url(../../img/header-bg.png), linear-gradient(rgb(88, 85, 83), sandybrown);
+  background-size: cover;
+}
 main {
-  margin: 100px auto 1.5rem auto;
+  min-height: 100vh;
+  margin: 105px auto 0 auto;
+
+  background-image: url(../../img/stripes-2x.png),
+    linear-gradient(140deg, rgba(253, 230, 187, .97), rgba(213,181,131,.97)),
+    url(../../img/nasty.png);
+  background-repeat: no-repeat,
+    no-repeat;
+  background-position: center, left;
+  background-size: auto 130vh, auto, cover;
 
   @media screen and (min-width: $screen-md) {
     margin-top: 0;
+    background-size: cover;
   }
 }
