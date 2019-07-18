@@ -10,72 +10,304 @@ media_folder: static/assets
 public_folder: /assets
 
 collections:
-  
   # Static Pages
   - name: "pages"
     label: "Pages"
+    identifier_field: name
     files:
       - file: "src/pages/index.md"
         label: "Landing Page"
-        name: "Index Page"
+        name: "index-page"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
-          - {label: Title, name: title, widget: string}
-          - {label: Heading, name: heading, widget: string}
-          - {label: Subheading, name: subheading , widget: string}
-          - {label: Main Page Body, name: body, widget: markdown}
-          - {label: Featured Image, name: featuredImage, widget: image}
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "index-page",
+            }
+          - { label: Title, name: title, widget: "hidden", default: "Revolver" }
+          - label: "Introduction / Hero Text"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: Heading, name: heading, widget: string }
+              - { label: Introduction Text, name: intro-body, widget: markdown }
+              - { label: Featured Image, name: featuredImage, widget: image }
+          - label: "The Latest (News)"
+            name: "news"
+            widget: "object"
+            fields:
+              - {
+                  label: "Display News?",
+                  name: newsIsVisible,
+                  widget: boolean,
+                  default: true,
+                }
+              - { label: "News Title", name: news-heading, widget: string }
+              - { label: "News Body", name: body, widget: markdown }
+              - { label: "News Image", name: newsImage, widget: image }
 
-  #     - file: "src/pages/contact.md"
-  #       label: "Contact Page"
-  #       name: "contact"
-  #       fields:
-  #         - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact-page"}
-  #         - {label: Title, name: title, widget: string}
-  #         - {label: Heading, name: heading, widget: string}
-  #         - {label: Contact Body, name: body, widget: markdown}
+      - file: "src/pages/discover.md"
+        label: "Discover Page"
+        name: "discover-page"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "discover-page",
+            }
+          - { label: Title, name: title, widget: "hidden", default: "Discover" }
+          - {
+              label: "Heading Text",
+              name: discover-heading,
+              widget: string,
+              default: "There's always something new at Revolver.",
+            }
+
+      - file: "src/pages/trade.md"
+        label: "Trade Page"
+        name: "trade-page"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "trade-page",
+            }
+          - { label: Title, name: title, widget: "hidden", default: "Trade" }
+          - label: "Trade F.A.Q."
+            name: "tradeFAQ"
+            widget: "list"
+            fields:
+              - {
+                  label: "Question",
+                  name: question,
+                  widget: string,
+                  default: "How do trades work?",
+                  hint: "Enter a question a customer might have about trades",
+                }
+              - { label: "Answer", name: answer, widget: markdown }
+          - { label: "Trade Legalese", name: body, widget: markdown }
+
+      - file: "src/pages/contact.md"
+        label: "Contact Page"
+        name: "contact-page"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "contact-page",
+            }
+          - { label: Title, name: title, widget: "hidden", default: "Contact" }
+          - { label: "Body Text", name: body, widget: markdown }
 
   # # dynamic pages
-  # - name: "news"
-  #   label: "News Post"
-  #   folder: "src/pages/news/"
-  #   create: true
-  #   slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-  #   fields:
-  #     - {label: "Template Key", name: "templateKey", widget: "hidden", default: "news-post"}
-  #     - {label: "Title", name: "title", widget: "string"}
-  #     - {label: "Publish Date", name: "date", widget: "datetime"}
-  #     - {label: "Tagline", name: "tagline", widget: "text", required: false, hint: "If no tagline provided, article excerpt will be used instead."}
-  #     - {label: "Body", name: "body", widget: "markdown"}
-  #     - {label: "Tags", name: "tags", widget: "list"}
+  - name: "locations"
+    identifier_field: name
+    label: "Locations"
+    folder: src/data/locations
+    create: true
+    extension: json
+    format: json
+    slug: "{{slug}}"
+    fields:
+      - { label: "Location Name", name: "name", widget: "string" }
+      - { label: "Store Location", name: location, widget: "map" }
+      - {
+          label: "Store Map (Interior)",
+          name: "mallImg",
+          widget: "image",
+          required: false,
+          hint:"Use a picture of the mall interior map.",
+        }
+      - { label: "Address", name: "address", widget: "string" }
+      - { label: "City", name: "city", widget: "string" }
+      - {
+          label: "Province",
+          name: "province",
+          widget: "string",
+          hint: "Abbreviate to two characters (Ex: Alberta = AB)",
+        }
+      - { label: "Postal Code", name: "postalCode", widget: "string" }
+      - { label: "Phone Number", name: "phoneNumber", widget: "string" }
+      - { label: "Hours", name: "hours", widget: "text" }
 
+  - name: "products"
+    label: "Products"
+    identifier_field: name
+    folder: "src/pages/products/"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "product-item",
+        }
+      - label: "Product Category"
+        name: "productType"
+        widget: "select"
+        options:
+          - { label: "Music", value: "music" }
+          - { label: "DVD/Blu-Ray", value: "movie" }
+          - { label: "Merchandise", value: "merch" }
+      - { label: "Artist / Product Name", name: "title", widget: "string" }
+      - {
+          label: "Album / Product Subtitle",
+          name: "subtitle",
+          widget: "string",
+          hint: "This is required to properly sort products. If product has no sub-title, describe the type of item it is.",
+        }
+      - {
+          label: "Genre/Category",
+          name: genre,
+          widget: string,
+          required: false,
+          hint: "Not required",
+        }
+      - label: "Product Image"
+        name: "productImg"
+        widget: "image"
+        media_library:
+          config:
+            multiple: false
+      - {
+          label: "Local",
+          name: isLocal,
+          widget: boolean,
+          default: false,
+          hint: "Was this product made in Canada?",
+        }
+      - {
+          label: "Condition",
+          name: "condition",
+          widget: string,
+          default: "Vinyl (Mint)",
+          required: false,
+          hint: "Describe the object. CD / DVD? Album? What condition is it in? Not required.",
+        }
+      - { label: "Listen Link / Trailer Link", name: mediaUrl, widget: string }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - {
+          label: "Tags",
+          name: "tags",
+          widget: "list",
+          required: false,
+          hint: "Write tags to describe the object.",
+        }
+      - {
+          label: "Unique ID",
+          name: id,
+          widget: "uuid",
+          description: "Unique Identifier used to id products. DO NOT CHANGE.",
+          hint: "Seriously dont change this",
+        }
 
-  # - name: "members"
-  #   identifier_field: name
-  #   label: "Members"
-  #   folder: src/data/members
-  #   create: true
-  #   extension: json
-  #   format: json
-  #   slug: "{{slug}}"
-  #   fields:
-  #     - {label: "Image", name: "image", widget: "image", default: "/assets/default-user.png"}
-  #     - {label: "Name", name: "name", widget: "string"}
-  #     - {label: "Position", name: "position", widget: "string"}
-  #     - {label: "Bio", name: "bio", widget: "text"}
-
-     
-  # - name: "projects"
-  #   identifier_field: name
-  #   label: "Projects"
-  #   folder: src/data/projects
-  #   create: true
-  #   extension: json
-  #   format: json
-  #   slug: "{{slug}}"
-  #   fields:
-  #     - {label: "Image", name: "image", widget: "image", default: "/assets/default-project.png"}
-  #     - {label: "Name", name: "name", widget: "string"}
-  #     - {label: "Author", name: "author", widget: "string"}
-  #     - {label: "Description", name: "description", widget: "text"} 
-  #     - {label: "Link", name: "link", widget: "string", hint: "Enter the link to your project homepage / git repo"} 
+  - name: "productLists"
+    identifier_field: name
+    label: "Product Lists"
+    files:
+      - label: "Featured Products"
+        name: "featuredProducts"
+        file: "src/data/featured.json"
+        fields:
+          - {
+              label: Title,
+              name: title,
+              widget: hidden,
+              default: "featured-products",
+            }
+          - label: "Product List"
+            name: "featured-list"
+            description: "Arrange this list to control position of featured items."
+            widget: "list"
+            fields:
+              - label: "Product"
+                name: "product"
+                widget: "relation"
+                collection: "products"
+                searchFields: ["productType", "title", "subtitle"]
+                valueField: "id"
+                displayFields: ["productType", "title", "subtitle"]
+              - {
+                  label: "Blurb",
+                  name: "blurb",
+                  widget: text,
+                  required: false,
+                  description: "Blurb to describe product, used on feature pages. If no blurb provided, one is generated from the product description",
+                }
+          - label: "Local Talent"
+            name: "localProducts"
+            file: "src/data/local.json"
+            fields:
+              - {
+                  label: Title,
+                  name: title,
+                  widget: hidden,
+                  default: "local-products",
+                }
+              - label: "Local Talent List"
+                name: "local-list"
+                description: "Arrange this list to control position of featured items."
+                widget: "list"
+                fields:
+                  - label: "Product"
+                    name: "product"
+                    widget: "relation"
+                    collection: "products"
+                    searchFields: ["productType", "title", "subtitle"]
+                    valueField: "id"
+                    displayFields: ["productType", "title", "subtitle"]
+                  - {
+                      label: "Blurb",
+                      name: "blurb",
+                      widget: text,
+                      required: false,
+                      description: "Blurb to describe product, used on feature pages. If no blurb provided, one is generated from the product description",
+                    }
+          - label: "Indie Corner"
+            name: "indieProducts"
+            file: "src/data/indie.json"
+            fields:
+              - {
+                  label: Title,
+                  name: title,
+                  widget: hidden,
+                  default: "indie-products",
+                }
+              - label: "Indie Corner List"
+                name: "indie-list"
+                description: "Arrange this list to control position of featured items."
+                widget: "list"
+                fields:
+                  - label: "Product"
+                    name: "product"
+                    widget: "relation"
+                    collection: "products"
+                    searchFields: ["productType", "title", "subtitle"]
+                    valueField: "id"
+                    displayFields: ["productType", "title", "subtitle"]
+                  - {
+                      label: "Blurb",
+                      name: "blurb",
+                      widget: text,
+                      required: false,
+                      description: "Blurb to describe product, used on feature pages. If no blurb provided, one is generated from the product description",
+                    }
+# - name: "projects"
+#   identifier_field: name
+#   label: "Projects"
+#   folder: src/data/projects
+#   create: true
+#   extension: json
+#   format: json
+#   slug: "{{slug}}"
+#   fields:
+#     - {label: "Image", name: "image", widget: "image", default: "/assets/default-project.png"}
+#     - {label: "Name", name: "name", widget: "string"}
+#     - {label: "Author", name: "author", widget: "string"}
+#     - {label: "Description", name: "description", widget: "text"}
+#     - {label: "Link", name: "link", widget: "string", hint: "Enter the link to your project homepage / git repo"}
