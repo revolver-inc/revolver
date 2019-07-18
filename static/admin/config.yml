@@ -164,7 +164,7 @@ collections:
         }
       - {
           label: "Artist / Product Name",
-          name: "name",
+          name: "title",
           widget: "string",
           hint: "This is the heading that will show up on the website",
         }
