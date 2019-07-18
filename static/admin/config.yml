@@ -251,7 +251,6 @@ collections:
                 collection: "products"
                 searchFields: ["productType", "title", "subtitle"]
                 valueField: "name"
-
                 displayFields: ["productType", "title", "subtitle"]
               - {
                   label: "Blurb",
