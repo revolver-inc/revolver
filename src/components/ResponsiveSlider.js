@@ -1,6 +1,9 @@
 import React, { Component } from "react"
-import Slider from "react-slick"
 import PropTypes from "prop-types"
+
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
 export default class ResponsiveSlider extends Component {
   // static PropTypes = {
@@ -58,7 +61,7 @@ export default class ResponsiveSlider extends Component {
     if (render) {
       return (
         <div>
-          <h2> Responsive </h2>
+          <h2> Featured Items </h2>
           <Slider {...settings}>
             <div>
               <h3>1</h3>
