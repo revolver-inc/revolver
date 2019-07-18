@@ -16,6 +16,14 @@
   background-size: cover;
   z-index: 99;
 }
+
+.secret-h1 {
+  display: block;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  font-size: 2px;
+}
 main {
   min-height: 100vh;
   margin: 105px auto 0 auto;

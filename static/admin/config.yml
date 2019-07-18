@@ -228,7 +228,7 @@ collections:
 
   - name: "productLists"
     identifier_field: name
-    label: "Product Lists"
+    label: "Product Listings"
     files:
       - label: "Featured Products"
         name: "featuredProducts"
@@ -240,7 +240,7 @@ collections:
               widget: hidden,
               default: "featured-products",
             }
-          - label: "Product List"
+          - label: "Featured Listing"
             name: "featured-list"
             description: "Arrange this list to control position of featured items."
             widget: "list"
@@ -270,7 +270,7 @@ collections:
               widget: hidden,
               default: "local-products",
             }
-          - label: "Local Talent List"
+          - label: "Local Talent Listing"
             name: "local-list"
             description: "Arrange this list to control position of featured items."
             widget: "list"
@@ -299,7 +299,7 @@ collections:
               widget: hidden,
               default: "indie-products",
             }
-          - label: "Indie Corner List"
+          - label: "Indie Corner Listing"
             name: "indie-list"
             description: "Arrange this list to control position of featured items."
             widget: "list"
