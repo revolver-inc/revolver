@@ -151,9 +151,9 @@ collections:
         name: "productType"
         widget: "select"
         options:
-          - { label: "Music", value: "music" }
-          - { label: "DVD/Blu-Ray", value: "movie" }
-          - { label: "Merchandise", value: "merch" }
+          - { label: "Music", value: "MUSIC" }
+          - { label: "DVD/Blu-Ray", value: "MOVIE" }
+          - { label: "Merchandise", value: "MERCH" }
       - {label: "Unique Product Title", name: title, widget: string, hint: "Does not accept spaces. This field is important, the website uses it internally. You will use it to control the position of featured products, so make it human-readable. Example: MUSIC-Nirvana-Nevermind", pattern: "^\S*$"}
       - { label: "Artist / Product Name", name: "name", widget: "string", hint: "This is the heading that will show up on the website"}
       - {
