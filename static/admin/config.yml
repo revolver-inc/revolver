@@ -239,64 +239,65 @@ collections:
                   required: false,
                   description: "Blurb to describe product, used on feature pages. If no blurb provided, one is generated from the product description",
                 }
-          - label: "Local Talent"
-            name: "localProducts"
-            file: "src/data/local.json"
+
+      - label: "Local Talent"
+        name: "localProducts"
+        file: "src/data/local.json"
+        fields:
+          - {
+              label: Title,
+              name: title,
+              widget: hidden,
+              default: "local-products",
+            }
+          - label: "Local Talent List"
+            name: "local-list"
+            description: "Arrange this list to control position of featured items."
+            widget: "list"
             fields:
+              - label: "Product"
+                name: "product"
+                widget: "relation"
+                collection: "products"
+                searchFields: ["productType", "title", "subtitle"]
+                valueField: "id"
+                displayFields: ["productType", "title", "subtitle"]
               - {
-                  label: Title,
-                  name: title,
-                  widget: hidden,
-                  default: "local-products",
+                  label: "Blurb",
+                  name: "blurb",
+                  widget: text,
+                  required: false,
+                  description: "Blurb to describe product, used on feature pages. If no blurb provided, one is generated from the product description",
                 }
-              - label: "Local Talent List"
-                name: "local-list"
-                description: "Arrange this list to control position of featured items."
-                widget: "list"
-                fields:
-                  - label: "Product"
-                    name: "product"
-                    widget: "relation"
-                    collection: "products"
-                    searchFields: ["productType", "title", "subtitle"]
-                    valueField: "id"
-                    displayFields: ["productType", "title", "subtitle"]
-                  - {
-                      label: "Blurb",
-                      name: "blurb",
-                      widget: text,
-                      required: false,
-                      description: "Blurb to describe product, used on feature pages. If no blurb provided, one is generated from the product description",
-                    }
-          - label: "Indie Corner"
-            name: "indieProducts"
-            file: "src/data/indie.json"
+      - label: "Indie Corner"
+        name: "indieProducts"
+        file: "src/data/indie.json"
+        fields:
+          - {
+              label: Title,
+              name: title,
+              widget: hidden,
+              default: "indie-products",
+            }
+          - label: "Indie Corner List"
+            name: "indie-list"
+            description: "Arrange this list to control position of featured items."
+            widget: "list"
             fields:
+              - label: "Product"
+                name: "product"
+                widget: "relation"
+                collection: "products"
+                searchFields: ["productType", "title", "subtitle"]
+                valueField: "id"
+                displayFields: ["productType", "title", "subtitle"]
               - {
-                  label: Title,
-                  name: title,
-                  widget: hidden,
-                  default: "indie-products",
+                  label: "Blurb",
+                  name: "blurb",
+                  widget: text,
+                  required: false,
+                  description: "Blurb to describe product, used on feature pages. If no blurb provided, one is generated from the product description",
                 }
-              - label: "Indie Corner List"
-                name: "indie-list"
-                description: "Arrange this list to control position of featured items."
-                widget: "list"
-                fields:
-                  - label: "Product"
-                    name: "product"
-                    widget: "relation"
-                    collection: "products"
-                    searchFields: ["productType", "title", "subtitle"]
-                    valueField: "id"
-                    displayFields: ["productType", "title", "subtitle"]
-                  - {
-                      label: "Blurb",
-                      name: "blurb",
-                      widget: text,
-                      required: false,
-                      description: "Blurb to describe product, used on feature pages. If no blurb provided, one is generated from the product description",
-                    }
 # - name: "projects"
 #   identifier_field: name
 #   label: "Projects"
