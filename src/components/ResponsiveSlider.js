@@ -61,33 +61,7 @@ export default class ResponsiveSlider extends Component {
     if (render) {
       return (
         <div>
-          <h2> Featured Items </h2>
-          <Slider {...settings}>
-            <div>
-              <h3>1</h3>
-            </div>
-            <div>
-              <h3>2</h3>
-            </div>
-            <div>
-              <h3>3</h3>
-            </div>
-            <div>
-              <h3>4</h3>
-            </div>
-            <div>
-              <h3>5</h3>
-            </div>
-            <div>
-              <h3>6</h3>
-            </div>
-            <div>
-              <h3>7</h3>
-            </div>
-            <div>
-              <h3>8</h3>
-            </div>
-          </Slider>
+          <Slider {...settings}>{children}</Slider>
         </div>
       )
     }

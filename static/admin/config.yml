@@ -31,7 +31,7 @@ collections:
             widget: "object"
             fields:
               - { label: Heading, name: heading, widget: string }
-              - { label: Introduction Text, name: intro-body, widget: markdown }
+              - { label: Introduction Text, name: introBody, widget: markdown }
               - { label: Featured Image, name: featuredImage, widget: image }
           - label: "The Latest (News)"
             name: "news"
@@ -44,7 +44,7 @@ collections:
                   default: true,
                   hint: "This toggle needs to be to the left if you want it to display.",
                 }
-              - { label: "News Title", name: news-heading, widget: string }
+              - { label: "News Title", name: newsHeading, widget: string }
               - { label: "News Body", name: body, widget: markdown }
               - { label: "News Image", name: newsImage, widget: image }
 
@@ -61,7 +61,7 @@ collections:
           - { label: Title, name: title, widget: "hidden", default: "Discover" }
           - {
               label: "Heading Text",
-              name: discover-heading,
+              name: discoverHeading,
               widget: string,
               default: "There's always something new at Revolver.",
             }
@@ -242,7 +242,7 @@ collections:
               default: "featured-products",
             }
           - label: "Featured Listing"
-            name: "featured-list"
+            name: "featuredList"
             description: "Arrange this list to control position of featured items."
             widget: "list"
             fields:
@@ -272,7 +272,7 @@ collections:
               default: "local-products",
             }
           - label: "Local Talent Listing"
-            name: "local-list"
+            name: "localList"
             description: "Arrange this list to control position of featured items."
             widget: "list"
             fields:
@@ -301,7 +301,7 @@ collections:
               default: "indie-products",
             }
           - label: "Indie Corner Listing"
-            name: "indie-list"
+            name: "indieList"
             description: "Arrange this list to control position of featured items."
             widget: "list"
             fields:
@@ -319,17 +319,3 @@ collections:
                   required: false,
                   description: "Blurb to describe product, used on feature pages. If no blurb provided, one is generated from the product description",
                 }
-# - name: "projects"
-#   identifier_field: name
-#   label: "Projects"
-#   folder: src/data/projects
-#   create: true
-#   extension: json
-#   format: json
-#   slug: "{{slug}}"
-#   fields:
-#     - {label: "Image", name: "image", widget: "image", default: "/assets/default-project.png"}
-#     - {label: "Name", name: "name", widget: "string"}
-#     - {label: "Author", name: "author", widget: "string"}
-#     - {label: "Description", name: "description", widget: "text"}
-#     - {label: "Link", name: "link", widget: "string", hint: "Enter the link to your project homepage / git repo"}

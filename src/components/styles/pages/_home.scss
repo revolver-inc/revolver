@@ -5,4 +5,35 @@
   p {
     margin-bottom: 0;
   }
+  .intro-text {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.action-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: $screen-md){
+    flex-direction: row;
+  }
+
+  .btn-home {
+    margin-right: .5rem;
+    &:last-of-type{
+      margin-right: 0;
+    }
+  }
+  
+}
+
+.news {
+  h2 {
+    font-size: 1.75rem;
+  }
+}
+
+.home-slider {
+  padding-bottom: 3rem;
 }

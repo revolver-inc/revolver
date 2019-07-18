@@ -1,0 +1,31 @@
+.btn {
+  font-size: .85rem;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  color: white;
+  padding: .25rem 1.5rem;
+  text-decoration: none;
+  margin-bottom: .5rem;
+  box-shadow: $drop-shadow;
+  @media screen and (min-width: $screen-md){
+    font-size: 1rem;
+    padding: .25rem 1.75rem;
+  }
+
+  &:hover {
+    color: gold;
+  }
+
+  &-green {
+    @extend .btn;
+    background: $btn-green;
+  }
+  
+  &-brown {
+    @extend .btn;
+    background: $btn-brown;
+  }
+}
