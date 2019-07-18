@@ -145,7 +145,7 @@ collections:
           label: "Template Key",
           name: "templateKey",
           widget: "hidden",
-          default: "product-item",
+          default: "product-page",
         }
       - label: "Product Category"
         name: "productType"
@@ -154,9 +154,10 @@ collections:
           - { label: "Music", value: "music" }
           - { label: "DVD/Blu-Ray", value: "movie" }
           - { label: "Merchandise", value: "merch" }
-      - { label: "Artist / Product Name", name: "title", widget: "string" }
+      - {label: "Unique Product Title", name: title, widget: string, hint: "Does not accept spaces. This field is important, the website uses it internally. You will use it to control the position of featured products, so make it human-readable. Example: MUSIC-Nirvana-Nevermind", pattern: "^\S*$"}
+      - { label: "Artist / Product Name", name: "name", widget: "string", hint: "This is the heading that will show up on the website"}
       - {
-          label: "Album / Product Subtitle",
+          label: "Album Title/ Product Subtitle",
           name: "subtitle",
           widget: "string",
           hint: "This is required to properly sort products. If product has no sub-title, describe the type of item it is.",
@@ -174,6 +175,7 @@ collections:
         media_library:
           config:
             multiple: false
+      - {label: "Year Released", name: "year", widget: "number", required: false, hint: "Optional value."}
       - {
           label: "Local",
           name: isLocal,
@@ -196,14 +198,14 @@ collections:
           name: "tags",
           widget: "list",
           required: false,
-          hint: "Write tags to describe the object.",
+          hint: "Write tags to describe the object. Separate tags with a comma.",
         }
       - {
-          label: "Unique ID",
+          label: "Nerd Numbers",
           name: id,
           widget: "uuid",
           description: "Unique Identifier used to id products. DO NOT CHANGE.",
-          hint: "Seriously dont change this",
+          hint: "You shouldn't be able to change this. If you can, something has gone wrong, don't change it.",
         }
 
   - name: "productLists"
