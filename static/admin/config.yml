@@ -42,6 +42,7 @@ collections:
                   name: newsIsVisible,
                   widget: boolean,
                   default: true,
+                  hint: "This toggle needs to be to the left if you want it to display.",
                 }
               - { label: "News Title", name: news-heading, widget: string }
               - { label: "News Body", name: body, widget: markdown }
