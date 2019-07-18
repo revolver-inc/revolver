@@ -154,8 +154,19 @@ collections:
           - { label: "Music", value: "MUSIC" }
           - { label: "DVD/Blu-Ray", value: "MOVIE" }
           - { label: "Merchandise", value: "MERCH" }
-      - {label: "Unique Product Title", name: title, widget: string, hint: "Does not accept spaces. This field is important, the website uses it internally. You will use it to control the position of featured products, so make it human-readable. Example: MUSIC-Nirvana-Nevermind", pattern: "^\S*$"}
-      - { label: "Artist / Product Name", name: "name", widget: "string", hint: "This is the heading that will show up on the website"}
+      - {
+          label: "Unique Product Title",
+          name: title,
+          widget: string,
+          hint: "Does not accept spaces. This field is important, the website uses it internally. You will use it to control the position of featured products, so make it human-readable. Example: MUSIC-Nirvana-Nevermind",
+          pattern: "^\\S*$",
+        }
+      - {
+          label: "Artist / Product Name",
+          name: "name",
+          widget: "string",
+          hint: "This is the heading that will show up on the website",
+        }
       - {
           label: "Album Title/ Product Subtitle",
           name: "subtitle",
@@ -175,7 +186,13 @@ collections:
         media_library:
           config:
             multiple: false
-      - {label: "Year Released", name: "year", widget: "number", required: false, hint: "Optional value."}
+      - {
+          label: "Year Released",
+          name: "year",
+          widget: "number",
+          required: false,
+          hint: "Optional value.",
+        }
       - {
           label: "Local",
           name: isLocal,
