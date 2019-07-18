@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
-// import BlogRoll from "../components/BlogRoll"
+import ResponsiveSlider from "../components/ResponsiveSlider"
 
 const IndexPageTemplate = ({ data }) => {
   const { markdownRemark } = data
@@ -22,10 +22,9 @@ const IndexPageTemplate = ({ data }) => {
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </div>
       </section>
-      {/* <div
-        className="main-content"
-        dangerouslySetInnerHTML={{ __html: html }}
-      /> */}
+      <section>
+        <ResponsiveSlider />
+      </section>
     </Layout>
   )
 }
