@@ -6,7 +6,7 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 // import BlogRoll from "../components/BlogRoll"
 
-const IndexPageTemplate = ({ data }) => {
+const DiscoverPageTemplate = ({ data }) => {
   const { markdownRemark } = data
   const { html, frontmatter } = markdownRemark
   const { title, heading, subheading, description, featuredImage } = frontmatter
@@ -30,10 +30,10 @@ const IndexPageTemplate = ({ data }) => {
   )
 }
 
-export default IndexPageTemplate
+export default DiscoverPageTemplate
 
 export const pageQuery = graphql`
-  query IndexPageTemplate {
+  query DisoverPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       html
       frontmatter {
