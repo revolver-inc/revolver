@@ -249,9 +249,10 @@ collections:
                 name: "product"
                 widget: "relation"
                 collection: "products"
-                searchFields: ["productType", "name", "subtitle"]
-                valueField: "id"
-                displayFields: ["productType", "name", "subtitle"]
+                searchFields: ["productType", "title", "subtitle"]
+                valueField: "name"
+
+                displayFields: ["productType", "title", "subtitle"]
               - {
                   label: "Blurb",
                   name: "blurb",
@@ -280,7 +281,7 @@ collections:
                 widget: "relation"
                 collection: "products"
                 searchFields: ["productType", "title", "subtitle"]
-                valueField: "id"
+                valueField: "name"
                 displayFields: ["productType", "title", "subtitle"]
               - {
                   label: "Blurb",
@@ -309,7 +310,7 @@ collections:
                 widget: "relation"
                 collection: "products"
                 searchFields: ["productType", "title", "subtitle"]
-                valueField: "id"
+                valueField: "name"
                 displayFields: ["productType", "title", "subtitle"]
               - {
                   label: "Blurb",

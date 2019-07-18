@@ -40,7 +40,9 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
+    "react-slick": "^0.24.0",
     "react-transition-group": "^4.0.1",
+    "slick-carousel": "^1.8.1",
     "uuidv4": "^4.0.0"
   },
   "devDependencies": {
