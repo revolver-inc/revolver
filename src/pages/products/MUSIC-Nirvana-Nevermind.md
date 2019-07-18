@@ -1,8 +1,8 @@
 ---
 templateKey: product-page
-productType: music
-title: MUSIC-Nirvana-Nevermind
-name: Nirvana
+productType: MUSIC
+name: MUSIC-Nirvana-Nevermind
+title: Nirvana
 subtitle: Nevermind
 genre: Rock/Alternative
 year: 1991

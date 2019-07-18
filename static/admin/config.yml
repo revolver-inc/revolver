@@ -139,7 +139,8 @@ collections:
     identifier_field: name
     folder: "src/pages/products/"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}"
+    slug: "{{name}}"
+    # slug: "{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{slug}}"
     fields:
       - {
           label: "Template Key",
@@ -155,11 +156,11 @@ collections:
           - { label: "DVD/Blu-Ray", value: "MOVIE" }
           - { label: "Merchandise", value: "MERCH" }
       - {
-          label: "Unique Product Title",
-          name: title,
+          label: "Unique Product Name",
+          name: name,
           widget: string,
           hint: "Does not accept spaces. This field is important, the website uses it internally. You will use it to control the position of featured products, so make it human-readable. Example: MUSIC-Nirvana-Nevermind",
-          pattern: "^\\S*$",
+          pattern: ["^\\S*$", "No spaces allowed in product name!"],
         }
       - {
           label: "Artist / Product Name",
@@ -248,9 +249,9 @@ collections:
                 name: "product"
                 widget: "relation"
                 collection: "products"
-                searchFields: ["productType", "title", "subtitle"]
+                searchFields: ["productType", "name", "subtitle"]
                 valueField: "id"
-                displayFields: ["productType", "title", "subtitle"]
+                displayFields: ["productType", "name", "subtitle"]
               - {
                   label: "Blurb",
                   name: "blurb",

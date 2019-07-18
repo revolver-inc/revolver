@@ -1,10 +1,11 @@
 ---
 templateKey: product-page
-productType: music
-title: MUSIC-ArcadeFire-Funeral
-name: Arcade Fire
+productType: MUSIC
+name: MUSIC-ArcadeFire-Funeral
+title: Arcade Fire
 subtitle: Funeral
 genre: Alternative
+year: 2004
 productImg: /assets/arcade-fire.jpg
 isLocal: false
 condition: Vinyl (Mint)
