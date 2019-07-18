@@ -1,1 +1,20 @@
-{}
+{
+  "featured-list": [
+    {
+      "product": "MUSIC-ArcadeFire-Funeral",
+      "blurb": "This album kicks, it sings it rocks and rolls."
+    },
+    {
+      "product": "MUSIC-Nirvana-Nevermind",
+      "blurb": "The original. Loud. Angry. One of a kind."
+    },
+    {
+      "product": "MUSIC-BonIver-WildWood",
+      "blurb": "Soothing. Ominous. Weighty feelings of grandiose proportions."
+    },
+    {
+      "product": "MUSIC-DiscountLionSafari-OdditiesAndPlantForms",
+      "blurb": "This local duo spits fires and lays it all out in this epic wall of sound."
+    }
+  ]
+}
