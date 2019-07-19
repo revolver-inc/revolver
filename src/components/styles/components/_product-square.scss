@@ -1,0 +1,39 @@
+.product-square{
+  width: 95%;
+  display: flex;
+  color: white;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all .3s;
+  background: linear-gradient(#6D5D48, #2F2E2E);
+  border-radius: 4px;
+  box-shadow: $drop-shadow-alt, $drop-shadow;
+  &:hover {
+    color: gold;
+  }
+  h4, h5 {
+    font-family: $font-body;
+    margin-top: 0;
+    font-weight: 400;
+  }
+  h4 {
+    font-size: 1.25rem;
+    margin-bottom: .25rem;
+  }
+  h5 {
+    font-size: .75rem;
+  }
+  div {
+    width: 150px;
+    height: 150px;
+    margin-bottom: .85rem;
+    box-shadow: 0px 3px 3px #000000;
+    transition: all .25s;
+    padding-top: .5rem;
+    &:hover{
+      transform: scale(1.05)
+    }
+  }
+}

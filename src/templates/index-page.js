@@ -6,12 +6,57 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import ResponsiveSlider from "../components/ResponsiveSlider"
+import ProductSquare from "../components/product-square"
+
+const removeEmpty = obj => {
+  Object.keys(obj).forEach(key => obj[key] == null && delete obj[key])
+}
+
+function cleanList(li) {
+  removeEmpty(li)
+  return li
+}
+
+function cleanProducts(products) {
+  let arr = []
+  for (let raw of products) {
+    arr.push(raw.node.frontmatter)
+  }
+  return arr
+}
+
+function getLists(productLists) {
+  const productArr = []
+  for (let edge of productLists) {
+    productArr.push(cleanList(edge.node))
+  }
+  return { ...productArr[0], ...productArr[1], ...productArr[2] }
+}
+
+function buildSliderData(prodList, products) {
+  let sliderData = []
+  for (let item of prodList) {
+    let target = item.product
+    let found = products.find(elt => elt.name === target)
+    sliderData.push(found)
+  }
+  return sliderData
+}
 
 const IndexPageTemplate = ({ data }) => {
-  const { markdownRemark, allMarkdownRemark } = data
+  const { markdownRemark, allMarkdownRemark, allDataJson } = data
   const { html, frontmatter } = markdownRemark
   const { title, intro, news } = frontmatter
-  const products = allMarkdownRemark.edges
+  const rawProducts = allMarkdownRemark.edges
+  const rawProductLists = allDataJson.edges
+
+  const products = cleanProducts(rawProducts)
+  const productLists = getLists(rawProductLists)
+  const { featuredList, localList, indieList } = productLists
+
+  const featuredData = buildSliderData(featuredList, products)
+  const localData = buildSliderData(localList, products)
+  const indieData = buildSliderData(indieList, products)
 
   const converter = new showdown.Converter()
   const introHtml = converter.makeHtml(intro.introBody)
@@ -62,12 +107,25 @@ const IndexPageTemplate = ({ data }) => {
       <section className="home-slider">
         <h3>Featured Items</h3>
         <ResponsiveSlider>
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
+          {featuredData.map(product => (
+            <ProductSquare key={product.name} product={product} />
+          ))}
+        </ResponsiveSlider>
+      </section>
+      <section className="home-slider">
+        <h3>Local Talent</h3>
+        <ResponsiveSlider>
+          {localData.map(product => (
+            <ProductSquare key={product.name} product={product} />
+          ))}
+        </ResponsiveSlider>
+      </section>
+      <section className="home-slider">
+        <h3>Indie Corner</h3>
+        <ResponsiveSlider>
+          {indieData.map(product => (
+            <ProductSquare key={product.name} product={product} />
+          ))}
         </ResponsiveSlider>
       </section>
     </Layout>
@@ -113,6 +171,21 @@ export const pageQuery = graphql`
               relativePath
             }
             templateKey
+          }
+        }
+      }
+    }
+    allDataJson {
+      edges {
+        node {
+          featuredList {
+            product
+          }
+          indieList {
+            product
+          }
+          localList {
+            product
           }
         }
       }
