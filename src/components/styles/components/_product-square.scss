@@ -10,6 +10,7 @@
   background: linear-gradient(#6D5D48, #2F2E2E);
   border-radius: 4px;
   box-shadow: $drop-shadow-alt, $drop-shadow;
+  padding-top: .5rem;
   &:hover {
     color: gold;
   }
@@ -31,7 +32,6 @@
     margin-bottom: .85rem;
     box-shadow: 0px 3px 3px #000000;
     transition: all .25s;
-    padding-top: .5rem;
     &:hover{
       transform: scale(1.05)
     }
