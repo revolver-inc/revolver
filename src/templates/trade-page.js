@@ -34,8 +34,12 @@ const TradePageTemplate = ({ data }) => {
           `Records`,
         ]}
       />
-      <h1>{title}</h1>
-      <p>{headingBlurb}</p>
+      <header className="trade-header row">
+        <div className=" col-md-12">
+          <h1>{title}</h1>
+          <p>{headingBlurb}</p>
+        </div>
+      </header>
       <div className="trade-faq">
         <h2>Trade F.A.Q.</h2>
         <div className="trade-accordion">

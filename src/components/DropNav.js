@@ -52,13 +52,13 @@ class DropNav extends Component {
         {listOpen && (
           <ul className="drop-list" onClick={e => e.stopPropagation()}>
             <li>
-              <Link to="/news">Discover</Link>
+              <Link to="/discover">Discover</Link>
             </li>
             <li>
-              <Link to="/members">Locations</Link>
+              <Link to="/locations">Locations</Link>
             </li>
             <li>
-              <Link to="/projects">Trade</Link>
+              <Link to="/trade">Trade</Link>
             </li>
             <li>
               <Link to="/contact">Contact</Link>
