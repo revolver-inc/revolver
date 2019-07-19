@@ -1,6 +1,5 @@
 .product-square{
   width: 95%;
-  display: flex;
   color: white;
   overflow: hidden;
   flex-direction: column;
@@ -13,6 +12,17 @@
   padding-top: .5rem;
   &:hover {
     color: gold;
+  }
+  a, a:visited {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    &:hover{
+      color: gold;
+    }
   }
   h4, h5 {
     font-family: $font-body;
