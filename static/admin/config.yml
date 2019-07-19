@@ -236,6 +236,7 @@ collections:
   - name: "productLists"
     identifier_field: name
     label: "Product Listings"
+    delete: false
     files:
       - label: "Featured Products"
         name: "featuredProducts"
