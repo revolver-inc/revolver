@@ -79,7 +79,7 @@ collections:
           - { label: Title, name: title, widget: "hidden", default: "Trade" }
           - {
               label: "Heading Blurb",
-              name: "headerBlurb",
+              name: "headingBlurb",
               widget: "text",
               default: "We will buy your old records, movies and Dvd's!",
               hint: "This goes at the top of the web page. Try to keep it brief.",

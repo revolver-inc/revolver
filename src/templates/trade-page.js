@@ -1,10 +1,17 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import showdown from "showdown"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
-// import BlogRoll from "../components/BlogRoll"
+
+import Accordion from "../components/accordion"
+
+//Function to convert markdown string to HTML
+function convertMarkdown(converter, str) {
+  const converter = new showdown.Converter()
+  return converter.makeHtml(str)
+}
 
 const TradePageTemplate = ({ data }) => {
   const { markdownRemark } = data
@@ -30,6 +37,9 @@ const TradePageTemplate = ({ data }) => {
       <p>{headingBlurb}</p>
       <div className="trade-faq">
         <h2>Trade F.A.Q.</h2>
+        <div className="trade-accordion">
+          <Accordion title="Hey David! What's cookin?" content="Not Much" />
+        </div>
       </div>
       <section className="trade-guidelines">
         <h2>Trade Guidelines</h2>
