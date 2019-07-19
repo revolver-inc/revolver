@@ -8,16 +8,16 @@ const Nav = ({ mobileNav }) => {
     <nav className="site-nav">
       <ul className="list-nav">
         <li>
-          <Link to="/">Discover</Link>
+          <Link to="/discover">Discover</Link>
         </li>
         <li>
-          <Link to="/">Locations</Link>
+          <Link to="/locations">Locations</Link>
         </li>
         <li>
-          <Link to="/">Trade</Link>
+          <Link to="/trade">Trade</Link>
         </li>
         <li>
-          <Link to="/">Contact</Link>
+          <Link to="/contact">Contact</Link>
         </li>
       </ul>
       <DropNav className="mobile-view" />

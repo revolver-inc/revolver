@@ -8,7 +8,7 @@ import SEO from "../components/seo"
 import Accordion from "../components/accordion"
 
 //Function to convert markdown string to HTML
-function convertMarkdown(converter, str) {
+function convertMarkdown(str) {
   const converter = new showdown.Converter()
   return converter.makeHtml(str)
 }
