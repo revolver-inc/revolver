@@ -43,6 +43,7 @@ function buildSliderData(prodList, products) {
   return sliderData
 }
 
+// TODO convert to a React Component
 const IndexPageTemplate = ({ data }) => {
   const { markdownRemark, allMarkdownRemark, allDataJson } = data
   const { html, frontmatter } = markdownRemark
