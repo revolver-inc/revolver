@@ -210,7 +210,12 @@ collections:
           required: false,
           hint: "Describe the object. CD / DVD? Album? What condition is it in? Not required.",
         }
-      - { label: "Listen Link / Trailer Link", name: mediaUrl, widget: string }
+      - {
+          label: "Listen Link / Trailer Link",
+          name: mediaUrl,
+          widget: string,
+          required: false,
+        }
       - { label: "Body", name: "body", widget: "markdown" }
       - {
           label: "Tags",
@@ -225,6 +230,7 @@ collections:
           widget: "uuid",
           description: "Unique Identifier used to id products. DO NOT CHANGE.",
           hint: "You shouldn't be able to change this. If you can, something has gone wrong, don't change it.",
+          required: false,
         }
 
   - name: "productLists"

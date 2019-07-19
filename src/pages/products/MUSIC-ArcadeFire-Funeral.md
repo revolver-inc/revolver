@@ -1,7 +1,7 @@
 ---
 templateKey: product-page
 productType: MUSIC
-name: MUSIC-ArcadeFire-Funeral
+name: music-arcadefire-funeral
 title: Arcade Fire
 subtitle: Funeral
 genre: Alternative

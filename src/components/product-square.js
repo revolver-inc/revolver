@@ -6,7 +6,7 @@ const ProductSquare = ({ product }) => {
   const img = product.productImg.relativePath
   return (
     <div className="product-square">
-      <Link to={`/products/${product.name}`}>
+      <Link to={`/products/${product.name.toLowerCase()}`}>
         <div>
           <Image name={img} />
         </div>

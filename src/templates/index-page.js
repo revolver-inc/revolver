@@ -108,6 +108,7 @@ const IndexPageTemplate = ({ data }) => {
       <section className="home-slider">
         <h3>Featured Items</h3>
         <ResponsiveSlider>
+          {console.log(localData)}
           {featuredData.map(product => (
             <ProductSquare key={product.name} product={product} />
           ))}

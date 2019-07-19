@@ -1,7 +1,7 @@
 ---
 templateKey: product-page
 productType: MUSIC
-name: MUSIC-Nirvana-Nevermind
+name: music-nirvana-nevermind
 title: Nirvana
 subtitle: Nevermind
 genre: Rock/Alternative
