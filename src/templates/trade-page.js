@@ -9,23 +9,32 @@ import SEO from "../components/seo"
 const TradePageTemplate = ({ data }) => {
   const { markdownRemark } = data
   const { html, frontmatter } = markdownRemark
-  const { title, heading, subheading, description, featuredImage } = frontmatter
+  const { title, tradeFAQ, headingBlurb } = frontmatter
 
   return (
     <Layout>
-      <SEO title="Home" keywords={[`Game Creator's Space`, `GCS`, `NAIT`]} />
-      <section className="home-intro">
-        <Image name="record-store.png" />
-        {/* <h1>{title}</h1> */}
-        <div className="intro-content">
-          <h3>{heading}</h3>
-          <div dangerouslySetInnerHTML={{ __html: html }} />
-        </div>
+      <SEO
+        title="Revolver - Trade"
+        keywords={[
+          `Revolver`,
+          `Music`,
+          `Movies`,
+          `Pop Culture`,
+          `Trade`,
+          `Sell`,
+          `Vinyl`,
+          `Records`,
+        ]}
+      />
+      <h1>{title}</h1>
+      <p>{headingBlurb}</p>
+      <div className="trade-faq">
+        <h2>Trade F.A.Q.</h2>
+      </div>
+      <section className="trade-guidelines">
+        <h2>Trade Guidelines</h2>
+        <div dangerouslySetInnerHTML={{ __html: html }} />
       </section>
-      {/* <div
-        className="main-content"
-        dangerouslySetInnerHTML={{ __html: html }}
-      /> */}
     </Layout>
   )
 }
@@ -34,11 +43,12 @@ export default TradePageTemplate
 
 export const pageQuery = graphql`
   query TradePageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+    markdownRemark(frontmatter: { templateKey: { eq: "trade-page" } }) {
       html
       frontmatter {
         title
-        heading
+        tradeFAQ
+        headingBlurb
       }
     }
   }

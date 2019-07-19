@@ -77,6 +77,13 @@ collections:
               default: "trade-page",
             }
           - { label: Title, name: title, widget: "hidden", default: "Trade" }
+          - {
+              label: "Heading Blurb",
+              name: "headerBlurb",
+              widget: "text",
+              default: "We will buy your old records, movies and Dvd's!",
+              hint: "This goes at the top of the web page. Try to keep it brief.",
+            }
           - label: "Trade F.A.Q."
             name: "tradeFAQ"
             widget: "list"
