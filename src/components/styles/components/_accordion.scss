@@ -1,0 +1,11 @@
+.Collapsible{
+  background-color: rgb(212, 211, 211);
+  border: 1px solid darkslategrey;
+  border-radius: 4px;
+  transition: all .25s;
+}
+.Collapsible__contentInner {
+  padding: 10px;
+  border: 1px solid #ebebeb;
+  border-top: 0;
+}
