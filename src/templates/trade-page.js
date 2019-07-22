@@ -16,7 +16,6 @@ function convertMarkdown(str) {
 const TradePageTemplate = ({ data }) => {
   const { markdownRemark } = data
   const { html, frontmatter } = markdownRemark
-  // const { title } = frontmatter
   const { title, tradeFAQ, headingBlurb } = frontmatter
 
   return (
