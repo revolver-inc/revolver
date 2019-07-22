@@ -13,6 +13,7 @@ collections:
   # Static Pages
   - name: "pages"
     label: "Pages"
+    delete: false
     identifier_field: name
     files:
       - file: "src/pages/index.md"
