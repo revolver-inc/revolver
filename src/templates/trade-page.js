@@ -40,6 +40,7 @@ const TradePageTemplate = ({ data }) => {
           `Sell`,
           `Vinyl`,
           `Records`,
+          `Buy`,
         ]}
       />
       <header className="trade-header row">
