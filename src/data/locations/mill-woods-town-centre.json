@@ -1,0 +1,10 @@
+{
+  "name": "Mill Woods Town Centre",
+  "location": "{\"type\":\"Point\",\"coordinates\":[-113.429857,53.4553128]}",
+  "address": "2331 66 St NW #413",
+  "city": "Edmonton",
+  "province": "AB",
+  "postalCode": "T6K 4B5",
+  "phoneNumber": "(780) 705-3232",
+  "hours": "Monday-Friday: 10AM-9PM"
+}
