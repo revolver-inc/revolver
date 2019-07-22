@@ -129,7 +129,8 @@ collections:
           name: "mallImg",
           widget: "image",
           required: false,
-          hint:"Use a picture of the mall interior map.",
+          hint: "Use a picture of the mall interior map.",
+          default: null,
         }
       - { label: "Address", name: "address", widget: "string" }
       - { label: "City", name: "city", widget: "string" }

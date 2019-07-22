@@ -44,7 +44,6 @@ class ContactPageTemplate extends React.Component {
     const { html, frontmatter } = markdownRemark
     const { title } = frontmatter
 
-    console.log(this.props.data)
     return (
       <Layout>
         <SEO
