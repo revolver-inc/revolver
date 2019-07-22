@@ -13,19 +13,26 @@ const DiscoverPageTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Home" keywords={[`Game Creator's Space`, `GCS`, `NAIT`]} />
+      <SEO
+        title="Revolver - Discover"
+        keywords={[
+          `Revolver`,
+          `Discover`,
+          `Vinyl`,
+          `Movies`,
+          `Merch`,
+          `Music`,
+          `Records`,
+          `CDs`,
+        ]}
+      />
       <section className="home-intro">
         <Image name="record-store.png" />
-        {/* <h1>{title}</h1> */}
-        <div className="intro-content">
-          <h3>{heading}</h3>
+        <h1>Discover</h1>
+        <div className="discover-blurb">
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </div>
       </section>
-      {/* <div
-        className="main-content"
-        dangerouslySetInnerHTML={{ __html: html }}
-      /> */}
     </Layout>
   )
 }

@@ -83,7 +83,7 @@ class ContactPageTemplate extends React.Component {
             <p>
               Subject:
               <br />
-              <input type="text" name="email" onChange={this.handleChange} />
+              <input type="text" name="subject" onChange={this.handleChange} />
             </p>
             <p>
               Message:
