@@ -67,7 +67,8 @@ class ContactPageTemplate extends React.Component {
             <input type="hidden" name="form-name" value="contact-form" />
             <p className="hidden">
               <label>
-                Do not fill this out: <input name="no-robots-allowed" />
+                Do not fill this out:{" "}
+                <input name="no-robots-allowed" onChange={this.handleChange} />
               </label>
             </p>
             <p>

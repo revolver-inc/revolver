@@ -7,9 +7,8 @@ import SEO from "../components/seo"
 // import BlogRoll from "../components/BlogRoll"
 
 const DiscoverPageTemplate = ({ data }) => {
-  const { markdownRemark } = data
-  const { html, frontmatter } = markdownRemark
-  const { title, heading, subheading, description, featuredImage } = frontmatter
+  const { html, frontmatter } = data.markdownRemark
+  const { title, heading } = frontmatter
 
   return (
     <Layout>

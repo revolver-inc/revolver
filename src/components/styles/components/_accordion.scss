@@ -3,9 +3,10 @@
   border: 1px solid darkslategrey;
   border-radius: 4px;
   transition: all .25s;
+  padding: .75rem;
 }
 .Collapsible__contentInner {
-  padding: 10px;
-  border: 1px solid #ebebeb;
-  border-top: 0;
+  // border: 1px solid #ebebeb;
+  margin-top: .5rem;
+  border-top: 1px solid #ebebeb;
 }

@@ -16,9 +16,17 @@ function convertMarkdown(str) {
 const TradePageTemplate = ({ data }) => {
   const { markdownRemark } = data
   const { html, frontmatter } = markdownRemark
-  // const { title, tradeFAQ, headingBlurb } = frontmatter
-  const { title, headingBlurb } = frontmatter
+  const { title, tradeFAQ, headingBlurb } = frontmatter
 
+  const faqItems = tradeFAQ.map(tradeItem => {
+    return (
+      <li key={tradeItem.question}>
+        <Accordion title={tradeItem.question} content={tradeItem.answer} />
+      </li>
+    )
+  })
+
+  console.log(tradeFAQ)
   return (
     <Layout>
       <SEO
@@ -43,7 +51,7 @@ const TradePageTemplate = ({ data }) => {
       <div className="trade-faq">
         <h2>Trade F.A.Q.</h2>
         <div className="trade-accordion">
-          <Accordion title="Hey David! What's cookin?" content="Not Much" />
+          <ul>{faqItems}</ul>
         </div>
       </div>
       <section className="trade-guidelines">
@@ -62,7 +70,10 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        # tradeFAQ
+        tradeFAQ {
+          question
+          answer
+        }
         headingBlurb
       }
     }
