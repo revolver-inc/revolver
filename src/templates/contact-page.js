@@ -1,12 +1,16 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
-// import BlogRoll from "../components/BlogRoll"
 
-const ContactPageTemplate = ({ data }) => {
+class ContactPageTemplate extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {name: "", email: "", message: ""}
+  }
+// const ContactPageTemplate = ({ data }) => {
   const { markdownRemark } = data
   const { html, frontmatter } = markdownRemark
   const { title, heading, subheading, description, featuredImage } = frontmatter
@@ -14,18 +18,24 @@ const ContactPageTemplate = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" keywords={[`Game Creator's Space`, `GCS`, `NAIT`]} />
-      <section className="home-intro">
-        <Image name="record-store.png" />
-        {/* <h1>{title}</h1> */}
-        <div className="intro-content">
-          <h3>{heading}</h3>
-          <div dangerouslySetInnerHTML={{ __html: html }} />
-        </div>
+      <section className="contact-blurb">
+        <h1>Contact Us</h1>
+        <div dangerouslySetInnerHTML={{ __html: html }} />
       </section>
-      {/* <div
-        className="main-content"
-        dangerouslySetInnerHTML={{ __html: html }}
-      /> */}
+      <form
+        name="contact-form"
+        method="post"
+        data-netlify="true"
+        netlify-honeypot="no-robots-allowed"
+      >
+        <input type="hidden" name="form-name" value="contact-form" />
+        <p class="hidden">
+          <label>
+            Do not fill this out:{" "}
+            <input name="no-robots-allowed" />
+          </label>
+        </p>
+      </form>
     </Layout>
   )
 }
