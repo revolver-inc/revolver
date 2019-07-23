@@ -1,0 +1,27 @@
+.trade-accordion ul li{
+  border: 1px solid darkslategray;
+  border-bottom: 0;
+  opacity: 0.9;
+  &:first-of-type{
+    border-radius: 4px 4px 0 0;
+  }
+  &:last-of-type{
+    border-radius: 0 0 4px 4px;
+    border-bottom: 1px solid darkslategray;
+  }
+  &:nth-of-type(2n){
+    background-color: #b3bd9c;
+  }
+  &:nth-of-type(3n){
+    background-color: #d7b46a;
+  }
+  &:nth-of-type(4n){
+    background-color: #d9a368;
+  }
+  &:nth-of-type(5n){
+    background-color: #c38b64;
+  }
+  &:nth-of-type(6n+1){
+    background-color: #c6bd88;
+  }
+}
