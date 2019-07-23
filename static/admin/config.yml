@@ -43,7 +43,6 @@ collections:
                   name: newsIsVisible,
                   widget: boolean,
                   default: true,
-                  hint: "This toggle needs to be to the left if you want it to display.",
                 }
               - { label: "News Title", name: newsHeading, widget: string }
               - { label: "News Body", name: body, widget: markdown }
@@ -165,13 +164,7 @@ collections:
           - { label: "Music", value: "MUSIC" }
           - { label: "DVD/Blu-Ray", value: "MOVIE" }
           - { label: "Merchandise", value: "MERCH" }
-      - {
-          label: "Unique Product Name",
-          name: name,
-          widget: string,
-          hint: "Does not accept spaces. This field is important, the website uses it internally. You will use it to control the position of featured products, so make it human-readable. Example: MUSIC-Nirvana-Nevermind",
-          pattern: ["^\\S*$", "No spaces allowed in product name!"],
-        }
+
       - {
           label: "Artist / Product Name",
           name: "title",
@@ -215,7 +208,6 @@ collections:
           label: "Condition",
           name: "condition",
           widget: string,
-          default: "Vinyl (Mint)",
           required: false,
           hint: "Describe the object. CD / DVD? Album? What condition is it in? Not required.",
         }
@@ -232,6 +224,17 @@ collections:
           widget: "list",
           required: false,
           hint: "Write tags to describe the object. Separate tags with a comma.",
+        }
+      - {
+          label: "Unique Product Name",
+          name: name,
+          widget: string,
+          hint: "Does not accept spaces, capital letters or special characters. This field is important, it acts as the URL to link to the page. It is also used to control the position of featured products, so make it human-readable. Example: music-nirvana-nevermind",
+          pattern:
+            [
+              "^[a-z0-9\\-]+[^A-Z\\S]*$",
+              "No spaces, capitals or special characters allowed in product name!",
+            ],
         }
       - {
           label: "Nerd Numbers",
