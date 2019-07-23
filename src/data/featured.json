@@ -1,5 +1,9 @@
 {
-  "featuredList": [{
+  "featuredList": [
+    {
+      "product": "music-mfdoom-specialherbs1and2"
+    },
+    {
       "product": "music-arcadefire-funeral",
       "blurb": "This album kicks, it sings it rocks and rolls."
     },
