@@ -35,5 +35,11 @@
 }
 
 .home-slider {
+  margin: 0 auto;
+  max-width: 85%;
   padding-bottom: 3rem;
+  @media screen and (min-width: 576px){
+    max-width: 100%;
+    
+  }
 }

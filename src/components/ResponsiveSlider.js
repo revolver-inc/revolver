@@ -33,7 +33,7 @@ export default class ResponsiveSlider extends Component {
       initialSlide: 0,
       responsive: [
         {
-          breakpoint: 1024,
+          breakpoint: 992,
           settings: {
             slidesToShow: 3,
             slidesToScroll: 3,
@@ -42,7 +42,7 @@ export default class ResponsiveSlider extends Component {
           },
         },
         {
-          breakpoint: 600,
+          breakpoint: 768,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 2,
@@ -50,7 +50,7 @@ export default class ResponsiveSlider extends Component {
           },
         },
         {
-          breakpoint: 480,
+          breakpoint: 576,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
