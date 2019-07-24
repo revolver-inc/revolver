@@ -8,27 +8,28 @@
 }
 
 .Collapsible__trigger {
-  display: block;
   position: relative;
+  color: black;
+  display: block;
   font-weight: 500;
   opacity: .8;
   padding: 10px;
   &:after{
-    color: black;
     border-radius: 50%;
-    font-size: 1.25rem;
-    font-family: 'FontAwesome';
-    font-weight: 700;
-    content: '\f107';
+    content: url(../../img/caret-down-solid.svg);
     position: absolute;
     right: 10px;
+    width: 17px;
     top: 7px;
     display: block;
     transition: transform 300ms;
+    opacity: 1;
+      transform-origin: 50% 40%;
   }
   &.is-open{
     &:after{
-      transform: rotateZ(180deg)
+      transform: rotateZ(180deg);
+      
     }
   }
 }
