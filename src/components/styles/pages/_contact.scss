@@ -1,0 +1,48 @@
+.contact-page {
+  color: #111;
+  background: linear-gradient(254deg, rgba(224, 149, 20, 0.9),  rgba(224, 185, 116, 0.95)),
+              url(../../img/nasty.png);
+  background-size: cover;
+  border-radius: 4px;
+  padding: 1rem 1rem;
+  min-height: 75vh;
+  @media screen and (min-width: $screen-md){
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.contact-blurb{
+  padding: 1.95rem .5rem;
+}
+
+.form-container {
+  // background: #a17954e7;
+  // background: #8a6435c9;
+  background-size: cover;
+  border-radius: 3px;
+  padding: 1rem .5rem;
+  @media screen and (min-width: $screen-md){
+    width: 50%;
+  }
+  label {
+    font-weight: 700;
+  }
+  input, textarea {
+    margin-top: .25rem;
+    padding: .5rem .75rem;
+    font-family: $font-body;
+    font-size: 1rem;
+    font-weight: 300;
+    border-radius: 2px;
+    box-shadow: $drop-shadow-alt;
+    border: 0;
+    width: 100%;
+    max-width: 360px;
+    @media screen and (min-width: $screen-md){
+    }
+  }
+  textarea{
+    height: 115px;
+  }
+}

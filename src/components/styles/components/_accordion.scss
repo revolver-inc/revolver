@@ -25,11 +25,14 @@
     transition: transform 300ms;
     opacity: 1;
     transform-origin: 50% 40%;
+    cursor:pointer;
   }
   &.is-open{
-    &:after{
-      transform: rotateZ(180deg);
-      
-    }
+    // &:before{
+    //   transform: rotateZ(180deg);
+    // }
+    // & img {
+    //   transform: rotateZ(180deg);
+    // }
   }
 }
