@@ -1,7 +1,34 @@
 .Collapsible{
-  transition: all .25s;
-  padding: .75rem;
+  width: 100%;
 }
 .Collapsible__contentInner {
-  margin-top: .5rem;
+  font-weight: 300;
+  padding: 10px;
+  border-top: 1px solid darkslategrey;
+}
+
+.Collapsible__trigger {
+  display: block;
+  position: relative;
+  font-weight: 500;
+  opacity: .8;
+  padding: 10px;
+  &:after{
+    color: black;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    font-family: 'FontAwesome';
+    font-weight: 700;
+    content: '\f107';
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    display: block;
+    transition: transform 300ms;
+  }
+  &.is-open{
+    &:after{
+      transform: rotateZ(180deg)
+    }
+  }
 }

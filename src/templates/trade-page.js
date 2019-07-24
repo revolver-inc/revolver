@@ -18,25 +18,28 @@ const TradePageTemplate = ({ data }) => {
   const { html, frontmatter } = markdownRemark
   const { title, tradeFAQ, headingBlurb } = frontmatter
 
-  const testArr = [1, 2, 3, 4, 5, 6]
+  // const testArr = [1, 2, 3, 4, 5, 6]
 
-  const testItems = testArr.map(test => {
-    return (
-      <li key={test}>
-        <Accordion title={test} content={test} />
-      </li>
-    )
-  })
+  // const testItems = testArr.map((test, i) => {
+  //   return (
+  //     <li key={test}>
+  //       <Accordion title={test} idx={i} content={test} />
+  //     </li>
+  //   )
+  // })
 
-  const faqItems = tradeFAQ.map(tradeItem => {
+  const faqItems = tradeFAQ.map((tradeItem, idx) => {
     return (
       <li key={tradeItem.question}>
-        <Accordion title={tradeItem.question} content={tradeItem.answer} />
+        <Accordion
+          idx={idx}
+          title={tradeItem.question}
+          content={convertMarkdown(tradeItem.answer)}
+        />
       </li>
     )
   })
 
-  console.log(tradeFAQ)
   return (
     <Layout>
       <SEO
@@ -62,8 +65,7 @@ const TradePageTemplate = ({ data }) => {
       <div className="trade-faq">
         <h2>Trade F.A.Q.</h2>
         <div className="trade-accordion">
-          {/* <ul>{faqItems}</ul> */}
-          <ul>{testItems}</ul>
+          <ul>{faqItems}</ul>
         </div>
       </div>
       <section className="trade-guidelines">

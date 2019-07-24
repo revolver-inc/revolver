@@ -2,8 +2,15 @@
   border: 1px solid darkslategray;
   border-bottom: 0;
   opacity: 0.9;
+  p {
+    max-width: 65ch;
+  }
   &:first-of-type{
     border-radius: 4px 4px 0 0;
+    background-color: #c6bd88;
+    &:hover{
+      background-color:lighten(#c6bd88, 7%);
+    }
   }
   &:last-of-type{
     border-radius: 0 0 4px 4px;
@@ -11,17 +18,41 @@
   }
   &:nth-of-type(2n){
     background-color: #b3bd9c;
+    &:hover{
+      background-color:lighten(#b3bd9c, 7%);
+    }
+
   }
   &:nth-of-type(3n){
     background-color: #d7b46a;
+    &:hover{
+      background-color:lighten(#d7b46a, 7%);
+    }
+
   }
   &:nth-of-type(4n){
     background-color: #d9a368;
+    &:hover{
+      background-color:lighten(#d9a368, 7%);
+    }
+
   }
   &:nth-of-type(5n){
     background-color: #c38b64;
+    &:hover{
+      background-color:lighten(#c38b64, 7%);
+    }
+
   }
-  &:nth-of-type(6n+1){
+  &:nth-of-type(6n){
     background-color: #c6bd88;
+    &:hover{
+      background-color:lighten(#c6bd88, 7%);
+    }
+
   }
+}
+
+.trade-faq h2, .trade-guidelines h2{
+  font-size: 1.953em;
 }
