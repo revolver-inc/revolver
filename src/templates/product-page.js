@@ -29,7 +29,7 @@ const ProductPageTemplate = ({ data }) => {
   const tagItems = tags
     .map(tag => {
       console.log(tag.length)
-      if (tag.length > 0) return <li key={tag}>{`#${tag}`}</li>
+      if (tag.length > 0) return <li key={tag}>{`#${tag.trim()}`}</li>
     })
     .filter(elt => elt != undefined)
 
@@ -68,6 +68,12 @@ const ProductPageTemplate = ({ data }) => {
           <div className="product-details">
             {condition && <p className="product-condition">{condition}</p>}
             {isLocal && <p className="product-local-status">Local</p>}
+            {tags && (
+              <ul className="tag-list">
+                <span>Tags: </span>
+                {tagItems}
+              </ul>
+            )}
           </div>
         </div>
         <div className="product-content col-md-7">
@@ -77,12 +83,6 @@ const ProductPageTemplate = ({ data }) => {
               Find Stores
             </Link>
           </div>
-          {tags && (
-            <ul className="tag-list">
-              <span>Tags: </span>
-              {tagItems}
-            </ul>
-          )}
         </div>
       </article>
     </Layout>

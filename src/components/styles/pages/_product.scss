@@ -92,10 +92,9 @@
     display: flex;
     span {
       font-weight: 700;
-      margin-right: 1ch;
+      margin-right: .5rem;
     }
     li {
-      margin-right: 1ch;
       &:last-of-type{
         margin-right: 0;
       }
