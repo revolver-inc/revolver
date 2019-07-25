@@ -48,8 +48,6 @@ main {
     no-repeat;
   background-position: center, left;
   background-size: 230% 100%, auto, cover;
-  // background-size: auto 130%, auto, cover;
-  // background-size: cover;
 
   @media screen and (min-width: $screen-md) {
     margin-top: 0;
