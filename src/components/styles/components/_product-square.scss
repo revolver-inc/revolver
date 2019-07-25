@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   transition: all .3s;
   background: linear-gradient(#6D5D48, #2F2E2E);
   border-radius: 4px;
@@ -30,13 +31,15 @@
     font-weight: 400;
   }
   h4 {
-    font-size: 1.25rem;
+    font-size: .8rem;
     margin-bottom: .25rem;
+    font-weight: 400;
   }
   h5 {
     font-size: .75rem;
+    font-weight: 300;
   }
-  div {
+  .img-container {
     width: 150px;
     height: 150px;
     margin-bottom: .85rem;
