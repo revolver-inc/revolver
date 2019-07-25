@@ -216,13 +216,13 @@ collections:
           name: mediaUrl,
           widget: string,
           required: false,
+          default: " ",
         }
       - { label: "Body", name: "body", widget: "markdown" }
       - {
           label: "Tags",
           name: "tags",
           widget: "list",
-          required: false,
           hint: "Write tags to describe the object. Separate tags with a comma.",
         }
       - {

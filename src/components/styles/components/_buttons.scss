@@ -27,6 +27,7 @@
   &-brown {
     @extend .btn;
     background: $btn-brown;
+    max-width: 170px;
   }
 }
 

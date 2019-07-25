@@ -26,28 +26,64 @@ const ProductPageTemplate = ({ data }) => {
     productType,
   } = frontmatter
 
+  const tagItems = tags
+    .map(tag => {
+      console.log(tag.length)
+      if (tag.length > 0) return <li key={tag}>{`#${tag}`}</li>
+    })
+    .filter(elt => elt != undefined)
+
+  if (mediaUrl === " ") mediaUrl = undefined
+
   return (
     <Layout>
       <SEO
         title={`Revolver | ${title} - ${subtitle}`}
         keywords={[`Revolver`, `${title}`, `${subtitle}`, `${genre}`]}
       />
-      <article className="product">
-        <header>
-          <h1>{title}</h1>
-          <h2>{subtitle}</h2>
-          <p className="product-genre">{genre}</p>
-        </header>
-        <div className="product-media">
-          <Image name={productImg.relativePath} />
-          {condition && <p className="product-condition">{condition}</p>}
-          {mediaUrl && (
-            <a className="btn-media" href={mediaUrl}>
-              <FontAwesomeIcon icon={faPlayCircle} className="media-icon" />
-            </a>
+      <article className="product-page">
+        <div className="product-info-container col-md-5">
+          <header>
+            <h1>{title}</h1>
+            <h2>
+              {subtitle}
+              {year && ` (${year})`}
+            </h2>
+            <p className="product-genre">{genre}</p>
+          </header>
+          <div className="product-media">
+            <div className="product-img">
+              <Image name={productImg.relativePath} />
+              {mediaUrl && (
+                <a className="btn-media" href={mediaUrl} target="_blank">
+                  <FontAwesomeIcon
+                    icon={faPlayCircle}
+                    size="5x"
+                    className="media-icon"
+                  />
+                </a>
+              )}
+            </div>
+          </div>
+          <div className="product-details">
+            {condition && <p className="product-condition">{condition}</p>}
+            {isLocal && <p className="product-local-status">Local</p>}
+          </div>
+        </div>
+        <div className="product-content col-md-7">
+          <div className="body">
+            <div dangerouslySetInnerHTML={{ __html: html }} />
+            <Link to="/locations" className="btn-brown">
+              Find Stores
+            </Link>
+          </div>
+          {tags && (
+            <ul className="tag-list">
+              <span>Tags: </span>
+              {tagItems}
+            </ul>
           )}
         </div>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
       </article>
     </Layout>
   )
