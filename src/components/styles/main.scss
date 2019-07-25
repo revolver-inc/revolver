@@ -36,21 +36,21 @@ body {
   overflow-x: hidden;
   width: 100%;
 }
-main {
-  padding: 1rem 0;
-  min-height: 90vh;
-  margin: 105px auto 0 auto;
+.main {
+  // padding: 1rem 0;
+  // min-height: 90vh;
+  // margin: 105px auto 0 auto;
 
   // background-image: url(../../img/stripes-2x.png),
   //   linear-gradient(140deg, rgba(253, 230, 187, .97), rgba(213,181,131,.97)),
   //   url(../../img/nasty.png);
-  background-repeat: no-repeat,
-    no-repeat;
-  background-position: center, left;
-  background-size: 230% 100%, auto, cover;
+  // background-repeat: no-repeat,
+  //   no-repeat;
+  // background-position: center, left;
+  // background-size: 230% 100%, auto, cover;
 
   @media screen and (min-width: $screen-md) {
     margin-top: 0;
-    background-size: 100% 100%, cover, cover;
+  // background-size: 230% 100%, auto, cover;
   }
 }

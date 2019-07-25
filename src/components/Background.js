@@ -4,13 +4,17 @@ import React from "react"
 
 import BackgroundImage from "gatsby-background-image"
 
+const style = {
+  backgroundSize: "100% 100%, cover, cover",
+}
+
 const Background = ({ children, className }) => {
   const { stripes, nasty } = useStaticQuery(
     graphql`
       query {
         stripes: file(relativePath: { eq: "stripes-2x.png" }) {
           childImageSharp {
-            fluid(quality: 100) {
+            fluid(quality: 100, maxWidth: 1920) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -39,6 +43,7 @@ const Background = ({ children, className }) => {
       Tag={`main`}
       className={className}
       fluid={backgroundFluidImageStack}
+      style={style}
     >
       {children}
     </BackgroundImage>
