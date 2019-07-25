@@ -29,13 +29,13 @@ const Layout = ({ children }) => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
         <main>
-          {/* <Background> */}
-          <div className="container">
-            <div className="row">
-              <div className="col-12 offset-lg-1 col-lg-10">{children}</div>
+          <Background>
+            <div className="container">
+              <div className="row">
+                <div className="col-12 offset-lg-1 col-lg-10">{children}</div>
+              </div>
             </div>
-          </div>
-          {/* </Background> */}
+          </Background>
         </main>
         <Footer />
       </>

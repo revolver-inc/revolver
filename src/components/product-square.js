@@ -2,14 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 import Image from "./image"
 
-const titleStyle = {
-  fontWeight: 400,
-}
-
-const subTitleStyle = {
-  fontWeight: 300,
-}
-
 const maxStrLen = 24
 
 // Limit string length to 24 characters, if not add ellipsis

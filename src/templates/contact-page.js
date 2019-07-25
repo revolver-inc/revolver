@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, navigate } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
+// import Image from "../components/image"
 import SEO from "../components/seo"
 
 function encode(data) {
@@ -41,8 +41,7 @@ class ContactPageTemplate extends React.Component {
   // const ContactPageTemplate = ({ data }) => {
   render() {
     const { markdownRemark } = this.props.data
-    const { html, frontmatter } = markdownRemark
-    const { title } = frontmatter
+    const { html } = markdownRemark
 
     return (
       <Layout>

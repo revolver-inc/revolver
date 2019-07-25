@@ -46,7 +46,7 @@ function buildSliderData(prodList, products) {
 // TODO convert to a React Component
 const IndexPageTemplate = ({ data }) => {
   const { markdownRemark, allMarkdownRemark, allDataJson } = data
-  const { html, frontmatter } = markdownRemark
+  const { frontmatter } = markdownRemark
   const { title, intro, news } = frontmatter
   const rawProducts = allMarkdownRemark.edges
   const rawProductLists = allDataJson.edges
@@ -105,15 +105,16 @@ const IndexPageTemplate = ({ data }) => {
           <Image name={news.newsImage.relativePath} />
         </section>
       )}
+
       <section className="home-slider">
         <h3>Featured Items</h3>
         <ResponsiveSlider>
-          {console.log(localData)}
           {featuredData.map(product => (
             <ProductSquare key={product.name} product={product} />
           ))}
         </ResponsiveSlider>
       </section>
+
       <section className="home-slider">
         <h3>Local Talent</h3>
         <ResponsiveSlider>
@@ -122,6 +123,7 @@ const IndexPageTemplate = ({ data }) => {
           ))}
         </ResponsiveSlider>
       </section>
+
       <section className="home-slider">
         <h3>Indie Corner</h3>
         <ResponsiveSlider>

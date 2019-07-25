@@ -12,7 +12,7 @@ import { faPlayCircle } from "@fortawesome/free-solid-svg-icons"
 const ProductPageTemplate = ({ data }) => {
   const { markdownRemark } = data
   const { html, frontmatter } = markdownRemark
-  const {
+  let {
     name,
     title,
     subtitle,
@@ -30,8 +30,9 @@ const ProductPageTemplate = ({ data }) => {
     .map(tag => {
       console.log(tag.length)
       if (tag.length > 0) return <li key={tag}>{`#${tag.trim()}`}</li>
+      return null
     })
-    .filter(elt => elt != undefined)
+    .filter(elt => elt !== undefined)
 
   if (mediaUrl === " ") mediaUrl = undefined
 
@@ -55,7 +56,12 @@ const ProductPageTemplate = ({ data }) => {
             <div className="product-img">
               <Image name={productImg.relativePath} />
               {mediaUrl && (
-                <a className="btn-media" href={mediaUrl} target="_blank">
+                <a
+                  className="btn-media"
+                  href={mediaUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <FontAwesomeIcon
                     icon={faPlayCircle}
                     size="5x"
@@ -125,6 +131,7 @@ export const pageQuery = graphql`
             productImg {
               relativePath
             }
+            productType
             templateKey
           }
         }

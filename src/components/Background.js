@@ -1,10 +1,10 @@
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
-import styled from "styled-components"
+// import styled from "styled-components"
 
 import BackgroundImage from "gatsby-background-image"
 
-const MultiBackground = ({ children, className }) => {
+const Background = ({ children, className }) => {
   const { stripes, nasty } = useStaticQuery(
     graphql`
       query {
@@ -37,31 +37,23 @@ const MultiBackground = ({ children, className }) => {
   return (
     <BackgroundImage
       Tag={`main`}
-      id={`test`}
       className={className}
       fluid={backgroundFluidImageStack}
     >
-      <StyledInnerWrapper>{children}</StyledInnerWrapper>
+      {children}
     </BackgroundImage>
   )
 }
 
-const StyledInnerWrapper = styled.div`
-  margin-top: 10%;
-`
-// display: flex;
-// flex-direction: column;
-// align-items: center;
-
-const Background = styled(MultiBackground)`
-  width: 100%;
-  min-height: 90vh;
-  /* You should set a background-size as the default value is "cover"! */
-  background-size: 100% 100%, cover, cover;
-  /* So we won't have the default "lightgray" background-color. */
-  /* Now again, remember the stacking order of CSS: lowermost comes last! */
-  background-repeat: no-repeat, no-repeat, repeat;
-  background-position: center, left;
-`
+// const Background = styled(MultiBackground)`
+//   width: 100%;
+//   min-height: 90vh;
+//   /* You should set a background-size as the default value is "cover"! */
+//   background-size: 100% 100%, cover, cover;
+//   /* So we won't have the default "lightgray" background-color. */
+//   /* Now again, remember the stacking order of CSS: lowermost comes last! */
+//   background-repeat: no-repeat, no-repeat, repeat;
+//   background-position: center, left;
+// `
 
 export default Background
