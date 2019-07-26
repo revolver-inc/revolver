@@ -50,7 +50,7 @@
     "react-slick": "^0.24.0",
     "react-transition-group": "^4.0.1",
     "showdown": "^1.9.0",
-    "simple-react-google-maps": "^1.1.2",
+    "simple-react-google-maps": "https://github.com/SceptreData/simple-react-google-maps/tarball/master",
     "slick-carousel": "^1.8.1",
     "styled-components": "^4.3.2",
     "uuidv4": "^4.0.0"
