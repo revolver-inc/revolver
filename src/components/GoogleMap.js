@@ -10,7 +10,7 @@ const GoogleMap = ({ lat, lng, idx }) => {
         zoom={14}
         center={{ lat: lat, lng: lng }}
         markers={{ lat: lat, lng: lng }}
-        idx={idx}
+        index={idx}
       />
     </div>
   )
