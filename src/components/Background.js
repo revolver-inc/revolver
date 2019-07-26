@@ -1,12 +1,13 @@
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
-// import styled from "styled-components"
+import styled from "styled-components"
+import { useMediaQuery } from "react-responsive"
 
 import BackgroundImage from "gatsby-background-image"
 
-const style = {
-  backgroundSize: "100% 100%, cover, cover",
-}
+// const style = {
+//   backgroundSize: "100% 100%, cover, cover",
+// }
 
 const Background = ({ children, className }) => {
   const { stripes, nasty } = useStaticQuery(
@@ -43,22 +44,11 @@ const Background = ({ children, className }) => {
       Tag={`main`}
       className={className}
       fluid={backgroundFluidImageStack}
-      style={style}
+      // style={style}
     >
       {children}
     </BackgroundImage>
   )
 }
-
-// const Background = styled(MultiBackground)`
-//   width: 100%;
-//   min-height: 90vh;
-//   /* You should set a background-size as the default value is "cover"! */
-//   background-size: 100% 100%, cover, cover;
-//   /* So we won't have the default "lightgray" background-color. */
-//   /* Now again, remember the stacking order of CSS: lowermost comes last! */
-//   background-repeat: no-repeat, no-repeat, repeat;
-//   background-position: center, left;
-// `
 
 export default Background

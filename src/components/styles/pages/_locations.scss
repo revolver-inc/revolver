@@ -1,0 +1,61 @@
+.locations-page {
+  padding: 1.5rem 0rem;
+  h2 {
+    font-size: 1.953em;
+    margin-top: 0;
+  }
+  min-height: 90vh;
+  // background: rgba(255, 255, 255, 0.815);
+}
+
+.location-list {
+  height: 100%;
+}
+.location-item {
+  // background: white;
+  padding: 1rem .5rem;
+    @media screen and (min-width: $screen-md){
+      display: flex;
+      justify-content: space-between;
+    }
+
+  &:first-of-type{
+    border-radius: 4px 4px 0 0;
+    background: rgb(161, 187, 91);
+  }
+
+  &:last-of-type{
+    border-radius: 0 0 4px 4px;
+  }
+
+  &:nth-of-type(2n){
+    background: #f7c260;
+  }
+
+  &:nth-of-type(3n){
+    background: rgb(238, 153, 96);
+  }
+  &:nth-of-type(4n){
+    background: rgb(161, 187, 91);
+  }
+}
+.location-info {
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  @media screen and (min-width: $screen-md){
+    width: 50%;
+    text-align: left;
+  }
+}
+.map-container {
+  height: 300px;
+  border: 1px solid black;
+  overflow: hidden;
+  @media screen and (min-width:$screen-md){
+    width: 50%;
+    max-width: 400px;
+  }
+}

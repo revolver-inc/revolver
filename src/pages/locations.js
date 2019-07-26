@@ -3,36 +3,34 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import MapContainer from "../components/MapContainer"
+import LocationInfo from "../components/LocationInfo"
+import GoogleMap from "../components/GoogleMap"
 
 const LocationsPage = ({ data }) => {
   const locations = data.allLocationsJson.edges
 
-  locations.map(location => console.log(location.node))
-  const locationList = locations.map(location => {
+  const locationList = locations.map((location, idx) => {
     const point = JSON.parse(location.node.location)
     return (
-      <li key={location.node.phoneNumber}>
-        <h2>{location.node.name}</h2>
-
-        <p>
-          {location.node.address}
-          <br />
-          {location.node.city}, {location.node.province} -{" "}
-          {location.node.postalCode}
-          <br />
-          {location.node.phoneNumber}
-        </p>
-        <p>{location.node.hours}</p>
-        <MapContainer lat={point.coordinates[1]} lng={point.coordinates[0]} />
+      <li key={location.node.phoneNumber} className="location-item">
+        <LocationInfo location={location.node} />
+        <GoogleMap
+          lat={point.coordinates[1]}
+          lng={point.coordinates[0]}
+          idx={idx}
+        />
       </li>
     )
   })
+
   return (
     <Layout>
       <SEO title="Locations" />
-      <h1>Locations</h1>
-      <ul>{locationList}</ul>
+      <div className="locations-page">
+        <h1>Locations</h1>
+
+        <ul className="location-list">{locationList}</ul>
+      </div>
     </Layout>
   )
 }

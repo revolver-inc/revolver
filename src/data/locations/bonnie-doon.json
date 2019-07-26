@@ -1,0 +1,11 @@
+{
+  "city": "Edmonton",
+  "name": "Bonnie Doon Centre",
+  "mallImg": "/assets/bonnie-doon-map.jpg",
+  "hours": "Monday-Friday: 10AM-9PM",
+  "province": "AB",
+  "address": "2331 66 St NW #413",
+  "location": "{\"type\":\"Point\",\"coordinates\":[-100.429857,50.4553128]}",
+  "phoneNumber": "(780) 756-5100",
+  "postalCode": "T6K 4B5"
+}

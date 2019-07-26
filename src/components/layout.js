@@ -9,7 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
-import Background from "./Background"
+import ResponsiveBackground from "./ResponsiveBackground"
 import Header from "./header"
 import Footer from "./footer"
 import "./styles/main.scss"
@@ -28,13 +28,15 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <Background>
+        {/* <Background> */}
+        <ResponsiveBackground>
           <div className="container">
             <div className="row">
               <div className="col-12 offset-lg-1 col-lg-10">{children}</div>
             </div>
           </div>
-        </Background>
+        </ResponsiveBackground>
+        {/* </Background> */}
         <Footer />
       </>
     )}
