@@ -5,7 +5,7 @@ const GoogleMap = ({ lat, lng, idx }) => {
   return (
     <div className="map-container">
       <GoogleMaps
-        apiKey={process.env.GOOGLE_MAPS_API_KEY}
+        apiKey={process.env.GATSBY_GMAPS_API}
         style={{ height: "300px", width: "100%" }}
         zoom={14}
         center={{ lat: lat, lng: lng }}
