@@ -1,12 +1,29 @@
 
 .home-intro {
-  padding-top: .25rem;
+  // padding-top: rem;
+  margin-top: .75rem;
   width: 100%;
   p {
     margin-bottom: 0;
   }
   .intro-text {
     margin-bottom: 1.5rem;
+  }
+  @media screen and (min-width: $screen-lg){
+    position: relative;
+
+    .intro-content {
+      h3 {
+        margin-top: .75rem;
+      }
+      position: absolute;
+      top: 12%;
+      right:8px;
+      width: 50%;
+      background: rgba(245, 245, 245, 0.692);
+      padding: 1rem 1rem;
+      border-radius: 4px;
+    }
   }
 }
 

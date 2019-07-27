@@ -48,6 +48,7 @@ const IndexPageTemplate = ({ data }) => {
   const { markdownRemark, allMarkdownRemark, allDataJson } = data
   const { frontmatter } = markdownRemark
   const { title, intro, news } = frontmatter
+  const { featuredImage } = intro
   const rawProducts = allMarkdownRemark.edges
   const rawProductLists = allDataJson.edges
 
@@ -78,7 +79,7 @@ const IndexPageTemplate = ({ data }) => {
         ]}
       />
       <section className="home-intro">
-        <Image name="record-store.png" />
+        <Image className="home-img" name={featuredImage.relativePath} />
         <h1 className="secret-h1">{title}</h1>
         <div className="intro-content">
           <h3>{intro.heading}</h3>
