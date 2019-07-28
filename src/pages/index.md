@@ -2,7 +2,7 @@
 templateKey: index-page
 title: 'Revolver - Music, Movies and Pop Culture'
 intro:
-  featuredImage: /assets/1366px-most-common-size-welcome-banner.jpg
+  featuredImage: /assets/1920px-large-welcome-banner.jpg
   heading: Welcome to Revolver!
   introBody: >-
     Revolver Music is the largest independent chain of record stores in the
