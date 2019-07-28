@@ -10,6 +10,8 @@ year: 2007
 isLocal: true
 condition: Vinyl (Mint)
 mediaUrl: "https://www.youtube.com/watch?v=TWcyIpul8OE"
+useBlurb: false
+blurb: Look ma, no blurb.
 id: 704c5c0e-0876-4617-a63d-2cf8a4fc05ac
 tags:
   - Rock

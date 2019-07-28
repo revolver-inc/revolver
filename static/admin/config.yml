@@ -220,6 +220,19 @@ collections:
         }
       - { label: "Body", name: "body", widget: "markdown" }
       - {
+          label: "Show Blurb",
+          name: "useBlurb",
+          widget: boolean,
+          default: false,
+          hint: "Toggle this to overwrite the default text used on the 'Featured Item' object on the Discover page.",
+        }
+      - label: "Blurb Text"
+        name: blurb
+        widget: markdown
+        required: false
+        default: "WRITE BLURB HERE"
+        hint: If you toggle this on, you should write something in the blurb field.
+      - {
           label: "Tags",
           name: "tags",
           widget: "list",
@@ -272,13 +285,6 @@ collections:
                 searchFields: ["productType", "title", "subtitle"]
                 valueField: "name"
                 displayFields: ["productType", "title", "subtitle"]
-              - {
-                  label: "Blurb",
-                  name: "blurb",
-                  widget: text,
-                  required: false,
-                  description: "Blurb to describe product, used on feature pages. If no blurb provided, one is generated from the product description",
-                }
 
       - label: "Local Talent"
         name: "localProducts"

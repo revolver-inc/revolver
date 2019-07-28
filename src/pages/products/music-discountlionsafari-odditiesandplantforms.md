@@ -10,6 +10,8 @@ year: 2019
 isLocal: true
 condition: Vinyl (Mint)
 mediaUrl: "https://discountlionsafari.bandcamp.com/"
+useBlurb: true
+blurb: Local lyrics from the killer duo.
 tags:
   - Hip Hop
   - Canadian

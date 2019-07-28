@@ -6,10 +6,13 @@ title: Nirvana
 subtitle: Nevermind
 genre: Rock/Alternative
 year: 1991
+
 productImg: /assets/nirvana.jpg
 isLocal: false
 condition: Vinyl (Mint)
 mediaUrl: "https://www.youtube.com/watch?v=Bj6ozDzkBiY"
+useBlurb: false
+blurb: If you don't own this album, you need to add it to your collection today!
 tags:
   - Rock
   - Guitars

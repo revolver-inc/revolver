@@ -5,60 +5,23 @@ import showdown from "showdown"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import SliderData from "../components/SliderData"
 import ResponsiveSlider from "../components/ResponsiveSlider"
-import ProductSquare from "../components/product-square"
+import ProductSquare from "../components/ProductSquare"
 
-const removeEmpty = obj => {
-  Object.keys(obj).forEach(key => obj[key] == null && delete obj[key])
-}
-
-function cleanList(li) {
-  removeEmpty(li)
-  return li
-}
-
-function cleanProducts(products) {
-  let arr = []
-  for (let raw of products) {
-    arr.push(raw.node.frontmatter)
-  }
-  return arr
-}
-
-function getLists(productLists) {
-  const productArr = []
-  for (let edge of productLists) {
-    productArr.push(cleanList(edge.node))
-  }
-  return { ...productArr[0], ...productArr[1], ...productArr[2] }
-}
-
-function buildSliderData(prodList, products) {
-  let sliderData = []
-  for (let item of prodList) {
-    let target = item.product
-    let found = products.find(elt => elt.name === target)
-    sliderData.push(found)
-  }
-  return sliderData
-}
-
-// TODO convert to a React Component
 const IndexPageTemplate = ({ data }) => {
   const { markdownRemark, allMarkdownRemark, allDataJson } = data
   const { frontmatter } = markdownRemark
   const { title, intro, news } = frontmatter
   const { featuredImage } = intro
+
   const rawProducts = allMarkdownRemark.edges
   const rawProductLists = allDataJson.edges
 
-  const products = cleanProducts(rawProducts)
-  const productLists = getLists(rawProductLists)
-  const { featuredList, localList, indieList } = productLists
-
-  const featuredData = buildSliderData(featuredList, products)
-  const localData = buildSliderData(localList, products)
-  const indieData = buildSliderData(indieList, products)
+  const { featuredData, localData, indieData } = SliderData(
+    rawProducts,
+    rawProductLists
+  )
 
   const converter = new showdown.Converter()
   const introHtml = converter.makeHtml(intro.introBody)
@@ -88,10 +51,10 @@ const IndexPageTemplate = ({ data }) => {
             dangerouslySetInnerHTML={{ __html: introHtml }}
           />
           <div className="action-btns">
-            <Link to="/trade" className="btn-green btn-home">
+            <Link to="/trade/" className="btn-green btn-home">
               Learn More
             </Link>
-            <Link to="/trade" className="btn-brown btn-home">
+            <Link to="/locations/" className="btn-brown btn-home">
               Find Stores
             </Link>
           </div>

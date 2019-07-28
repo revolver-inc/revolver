@@ -1,15 +1,32 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import showdown from "showdown"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
+import FeatureSlider from "../components/FeatureSlider"
+import FeaturedItem from "../components/FeaturedItem"
+import ProductSquare from "../components/ProductSquare"
+import ResponsiveSlider from "../components/ResponsiveSlider"
 import SEO from "../components/seo"
-// import BlogRoll from "../components/BlogRoll"
+import SliderData from "../components/SliderData"
 
 const DiscoverPageTemplate = ({ data }) => {
-  const { html, frontmatter } = data.markdownRemark
+  const { markdownRemark, allMarkdownRemark, allDataJson } = data
+  const { frontmatter } = markdownRemark
   const { title, heading } = frontmatter
 
+  const rawProducts = allMarkdownRemark.edges
+  const rawProductLists = allDataJson.edges
+  const { featuredData, localData, indieData } = SliderData(
+    rawProducts,
+    rawProductLists
+  )
+
+  const converter = new showdown.Converter()
+  // const newsHtml = converter.makeHtml(heading)
+
+  // console.log(featuredData)
   return (
     <Layout>
       <SEO
@@ -25,12 +42,44 @@ const DiscoverPageTemplate = ({ data }) => {
           `CDs`,
         ]}
       />
-      <section className="home-intro">
-        <Image name="record-store.png" />
-        <h1>Discover</h1>
-        <div className="discover-blurb">
-          <div dangerouslySetInnerHTML={{ __html: html }} />
+      <div className="bread-crumbs"></div>
+
+      <section className="discover-intro">
+        <h1 className="discover-title">{title}</h1>
+        <p>{heading}</p>
+      </section>
+
+      <section className="discover-featured">
+        <div className="main-slider-container">
+          <h2>Featured Items</h2>
+          <FeatureSlider>
+            {featuredData.map(product => (
+              <FeaturedItem
+                key={product.name}
+                product={product}
+                converter={converter}
+              />
+            ))}
+          </FeatureSlider>
         </div>
+      </section>
+
+      <section className="discover-slider">
+        <h2>Local Talent</h2>
+        <ResponsiveSlider>
+          {localData.map(product => (
+            <ProductSquare key={product.name} product={product} />
+          ))}
+        </ResponsiveSlider>
+      </section>
+
+      <section className="discover-slider">
+        <h2>Indie Corner</h2>
+        <ResponsiveSlider>
+          {indieData.map(product => (
+            <ProductSquare key={product.name} product={product} />
+          ))}
+        </ResponsiveSlider>
       </section>
     </Layout>
   )
@@ -40,11 +89,46 @@ export default DiscoverPageTemplate
 
 export const pageQuery = graphql`
   query DisoverPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+    markdownRemark(frontmatter: { templateKey: { eq: "discover-page" } }) {
       html
       frontmatter {
         title
         heading
+      }
+    }
+    allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "product-page" } } }
+    ) {
+      edges {
+        node {
+          excerpt(format: HTML)
+          frontmatter {
+            name
+            title
+            subtitle
+            useBlurb
+            blurb
+            productImg {
+              relativePath
+            }
+            templateKey
+          }
+        }
+      }
+    }
+    allDataJson {
+      edges {
+        node {
+          featuredList {
+            product
+          }
+          indieList {
+            product
+          }
+          localList {
+            product
+          }
+        }
       }
     }
   }

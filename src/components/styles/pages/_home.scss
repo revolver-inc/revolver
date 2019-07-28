@@ -17,12 +17,20 @@
         margin-top: .75rem;
       }
       position: absolute;
-      top: 12%;
+      top: 2%;
       right:8px;
       width: 50%;
       background: rgba(245, 245, 245, 0.692);
       padding: 1rem 1rem;
       border-radius: 4px;
+    }
+  }
+
+  @media screen and (min-width: $screen-xl){
+    
+    .intro-content {
+      top: 12%;
+      right: 8px;
     }
   }
 }
@@ -32,8 +40,10 @@
   justify-content: center;
   align-items: center;
 
-  @media screen and (min-width: $screen-md){
+  @media screen and (min-width: $screen-lg){
+    margin-top: 2rem;
     flex-direction: row;
+    justify-content: space-around;
   }
 
   .btn-home {
