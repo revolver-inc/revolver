@@ -25,6 +25,15 @@
       border-radius: 4px;
     }
   }
+  .intro-img {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-top: -1.75rem;
+  }
 
   @media screen and (min-width: $screen-xl){
     

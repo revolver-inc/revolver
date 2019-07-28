@@ -42,7 +42,9 @@ const IndexPageTemplate = ({ data }) => {
         ]}
       />
       <section className="home-intro">
-        <Image className="home-img" name={featuredImage.relativePath} />
+        <div className="intro-img">
+          <Image className="home-img" name={featuredImage.relativePath} />
+        </div>
         <h1 className="secret-h1">{title}</h1>
         <div className="intro-content">
           <h3>{intro.heading}</h3>
