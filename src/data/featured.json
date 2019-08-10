@@ -1,23 +1,22 @@
 {
   "featuredList": [
     {
+      "product": "pirates-of-the-caribbean"
+    },
+    {
+      "product": "music-arcadefire-funeral"
+    },
+    {
+      "product": "music-nirvana-nevermind"
+    },
+    {
       "product": "music-mfdoom-specialherbs1and2"
     },
     {
-      "product": "music-arcadefire-funeral",
-      "blurb": "This album kicks, it sings it rocks and rolls."
+      "product": "music-boniver-wildwood"
     },
     {
-      "product": "music-nirvana-nevermind",
-      "blurb": "The original. Loud. Angry. One of a kind."
-    },
-    {
-      "product": "music-boniver-wildwood",
-      "blurb": "Soothing. Ominous. Weighty feelings of grandiose proportions."
-    },
-    {
-      "product": "music-discountlionsafari-odditiesandplantforms",
-      "blurb": "This local duo spits fires and lays it all out in this epic wall of sound."
+      "product": "music-discountlionsafari-odditiesandplantforms"
     }
   ]
 }
