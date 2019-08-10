@@ -2,8 +2,8 @@ import React from "react"
 import { graphql, navigate } from "gatsby"
 
 import Layout from "../components/layout"
-// import Image from "../components/image"
 import SEO from "../components/seo"
+import ContactBackground from "../components/ContactBackground"
 
 function encode(data) {
   return Object.keys(data)
@@ -49,12 +49,13 @@ class ContactPageTemplate extends React.Component {
           title="Revolver - Contact Us"
           keywords={[`Revolver`, `Contact`, `Contact Us`, `help`]}
         />
-        <div className="contact-page">
+        {/* <div className="contact-page"> */}
+        <ContactBackground className="contact-page">
           <section className="contact-blurb">
             <h1>Contact Us</h1>
             <div dangerouslySetInnerHTML={{ __html: html }} />
           </section>
-          <div className="form-container">
+          <div cla>
             <form
               name="contact-form"
               method="post"
@@ -104,7 +105,7 @@ class ContactPageTemplate extends React.Component {
               </p>
             </form>
           </div>
-        </div>
+        </ContactBackground>
       </Layout>
     )
   }
