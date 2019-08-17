@@ -22,7 +22,6 @@ const Nav = ({ mobileNav }) => {
         </li>
       </ul>
       {/* <DropNav className="mobile-view" /> */}
-      <DropMenu className="mobile-view" />
     </nav>
   )
 }

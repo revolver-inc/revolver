@@ -12,6 +12,7 @@ import { StaticQuery, graphql } from "gatsby"
 import ResponsiveBackground from "./ResponsiveBackground"
 import Header from "./header"
 import Footer from "./footer"
+import DropMenu from "./DropMenu"
 import "./styles/main.scss"
 
 const Layout = ({ children }) => (
@@ -27,6 +28,10 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
+        {/* I hate to do this but the menu has to exist out side of the Header
+            Thank safari for that one.
+        */}
+        <DropMenu className="mobile-view" />
         <Header siteTitle={data.site.siteMetadata.title} />
         <ResponsiveBackground>
           <div className="container">

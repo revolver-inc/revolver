@@ -21,7 +21,7 @@ const Header = ({ siteTitle }) => {
   )
   const logoImg = logo.childImageSharp.fluid
   return (
-    <header className="site-header">
+    <header className="site-header site-nav">
       <div className="container">
         <div className="row">
           <div className="header-container  col-12 offset-lg-1 col-lg-10">
