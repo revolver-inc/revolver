@@ -30,7 +30,7 @@ const Image = ({ name }) => (
       if (!img) {
         return null
       }
-      return <Img fluid={img.node.fluid} />
+      return <Img fluid={img.node.fluid} imgStyle={{ objectFit: "contain" }} />
     }}
   />
 )

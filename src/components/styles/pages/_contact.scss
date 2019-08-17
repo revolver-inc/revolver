@@ -1,11 +1,7 @@
 .contact-page {
   color: #111;
-  background: linear-gradient(254deg, rgba(224, 149, 20, 0.9),  rgba(224, 185, 116, 0.95)),
-              url(../../img/nasty.png);
-  background-size: cover;
-  border-radius: 4px;
-  padding: 1rem 1rem;
-  min-height: 75vh;
+  // background: linear-gradient(254deg, rgba(224, 149, 20, 0.9),  rgba(224, 185, 116, 0.95)),
+              // url(../../img/nasty.png);
   @media screen and (min-width: $screen-md){
     display: flex;
     justify-content: space-between;

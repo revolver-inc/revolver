@@ -1,16 +1,21 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import _ from "lodash"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import ProductSquare from "../components/ProductSquare"
+import ResponsiveSlider from "../components/ResponsiveSlider"
+import { cleanProducts } from "../components/SliderData"
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPlayCircle } from "@fortawesome/free-solid-svg-icons"
 
 // import BlogRoll from "../components/BlogRoll"
 
 const ProductPageTemplate = ({ data }) => {
-  const { markdownRemark } = data
+  const { markdownRemark, allMarkdownRemark } = data
   const { html, frontmatter } = markdownRemark
   let {
     name,
@@ -25,6 +30,10 @@ const ProductPageTemplate = ({ data }) => {
     productImg,
     productType,
   } = frontmatter
+
+  const products = cleanProducts(allMarkdownRemark.edges).filter(
+    prod => prod.name != name
+  )
 
   const tagItems = tags
     .map(tag => {
@@ -91,6 +100,14 @@ const ProductPageTemplate = ({ data }) => {
           </div>
         </div>
       </article>
+      <aside className="product-slider">
+        <h2>Be sure to check out...</h2>
+        <ResponsiveSlider>
+          {products.map(product => (
+            <ProductSquare key={product.name} product={product} />
+          ))}
+        </ResponsiveSlider>
+      </aside>
     </Layout>
   )
 }
@@ -121,6 +138,8 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       filter: { frontmatter: { templateKey: { eq: "product-page" } } }
+      limit: 10
+      sort: { fields: id, order: ASC }
     ) {
       edges {
         node {

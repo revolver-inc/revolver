@@ -28,7 +28,6 @@ const Header = ({ siteTitle }) => {
             <div className="brand-container">
               <Link to="/">
                 <h1 className="brand-logo" style={{ margin: 0 }}>
-                  {/* <Image name="logo.png" /> */}
                   <Img fluid={logoImg} />
                 </h1>
                 <ul className="tag-line">

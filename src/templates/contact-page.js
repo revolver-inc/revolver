@@ -55,7 +55,7 @@ class ContactPageTemplate extends React.Component {
             <h1>Contact Us</h1>
             <div dangerouslySetInnerHTML={{ __html: html }} />
           </section>
-          <div cla>
+          <div className="form-container">
             <form
               name="contact-form"
               method="post"

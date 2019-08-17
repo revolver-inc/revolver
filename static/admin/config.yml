@@ -314,7 +314,7 @@ collections:
     files:
       - label: "Featured Products"
         name: "featuredProducts"
-        file: "src/data/featured.json"
+        file: "src/data/lists/featured.json"
         fields:
           - {
               label: Title,
@@ -337,7 +337,7 @@ collections:
 
       - label: "Local Talent"
         name: "localProducts"
-        file: "src/data/local.json"
+        file: "src/data/lists/local.json"
         fields:
           - {
               label: Title,
@@ -366,7 +366,7 @@ collections:
                 }
       - label: "Indie Corner"
         name: "indieProducts"
-        file: "src/data/indie.json"
+        file: "src/data/lists/indie.json"
         fields:
           - {
               label: Title,

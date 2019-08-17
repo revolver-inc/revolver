@@ -12,12 +12,12 @@ import SEO from "../components/seo"
 import SliderData from "../components/SliderData"
 
 const DiscoverPageTemplate = ({ data }) => {
-  const { markdownRemark, allMarkdownRemark, allDataJson } = data
+  const { markdownRemark, allMarkdownRemark, allListsJson } = data
   const { frontmatter } = markdownRemark
   const { title, heading } = frontmatter
 
   const rawProducts = allMarkdownRemark.edges
-  const rawProductLists = allDataJson.edges
+  const rawProductLists = allListsJson.edges
   const { featuredData, localData, indieData } = SliderData(
     rawProducts,
     rawProductLists
@@ -42,7 +42,6 @@ const DiscoverPageTemplate = ({ data }) => {
           `CDs`,
         ]}
       />
-      <div className="bread-crumbs"></div>
 
       <section className="discover-intro">
         <h1 className="discover-title">{title}</h1>
@@ -116,7 +115,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    allDataJson {
+    allListsJson {
       edges {
         node {
           featuredList {

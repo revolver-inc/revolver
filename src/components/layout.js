@@ -28,7 +28,6 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
-        {/* <Background> */}
         <ResponsiveBackground>
           <div className="container">
             <div className="row">
@@ -36,7 +35,6 @@ const Layout = ({ children }) => (
             </div>
           </div>
         </ResponsiveBackground>
-        {/* </Background> */}
         <Footer />
       </>
     )}
