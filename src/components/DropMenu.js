@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import { slide as Menu } from "react-burger-menu"
+import Menu from "react-burger-menu/lib/menus/slide"
 
 const DropMenu = () => {
   return (
