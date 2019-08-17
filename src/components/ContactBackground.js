@@ -5,11 +5,22 @@ import { useMediaQuery } from "react-responsive"
 
 import BackgroundImage from "gatsby-background-image"
 
-// const style = {
-//   backgroundSize: "100% 100%, cover, cover",
-// }
+const Tablet = ({ children }) => {
+  const isTablet = useMediaQuery({ minWidth: 576, maxWidth: 767 })
+  return isTablet ? children : null
+}
 
-const ContactBackground = ({ children, className }) => {
+const Mobile = ({ children }) => {
+  const isMobile = useMediaQuery({ maxWidth: 575 })
+  return isMobile ? children : null
+}
+
+const Desktop = ({ children }) => {
+  const isDesktop = useMediaQuery({ minWidth: 768 })
+  return isDesktop ? children : null
+}
+
+const ImgBackground = ({ children, className }) => {
   const { tape } = useStaticQuery(
     graphql`
       query {
@@ -40,13 +51,34 @@ const ContactBackground = ({ children, className }) => {
     </BackgroundImage>
   )
 }
-
-const StyledContactBackground = styled(ContactBackground)`
+const TabletBackground = styled(ImgBackground)`
   color: #111;
-  background-size: cover;
+  background-size: auto 100%;
+  background-position: 0% 0%;
+  border-radius: 4px;
+  // padding: 1rem 1rem;
+  min-height: 75vh;
+`
+const DesktopBackground = styled(ImgBackground)`
+  color: #111;
+  background-size: auto 100%;
+  background-position: center;
   border-radius: 4px;
   padding: 1rem 1rem;
   min-height: 75vh;
 `
 
-export default StyledContactBackground
+const ContactBackground = ({ children }) => (
+  <>
+    <Mobile>
+      <div className="contact-page">{children}</div>
+    </Mobile>
+    <Tablet>
+      <TabletBackground className="contact-page">{children}</TabletBackground>
+    </Tablet>
+    <Desktop>
+      <DesktopBackground className="contact-page">{children}</DesktopBackground>
+    </Desktop>
+  </>
+)
+export default ContactBackground

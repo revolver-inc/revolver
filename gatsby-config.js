@@ -6,14 +6,9 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    // {
-    //   resolve: "gatsby-plugin-web-font-loader",
-    //   options: {
-    //     typekit: {
-    //       id: "uga1aiv",
-    //     },
-    //   },
-    // },
+
+    // The following section tells Gatsby where to find our files
+    // They are then loaded and can be accessed with graphql.
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -44,6 +39,8 @@ module.exports = {
         path: `${__dirname}/src/data`,
       },
     },
+
+    // These plugins are related to making blog posts out of mark down files.
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -73,6 +70,7 @@ module.exports = {
         ],
       },
     },
+    // The following plugins handle images and Json files
     "gatsby-transformer-json",
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -89,7 +87,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Revolver-inc`,
-        short_name: `starter`,
+        short_name: `Revolver`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,

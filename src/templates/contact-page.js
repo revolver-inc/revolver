@@ -38,6 +38,53 @@ class ContactPageTemplate extends React.Component {
       .catch(error => alert(error))
   }
 
+  ContactForm = () => {
+    return (
+      <div className="form-container">
+        <form
+          name="contact-form"
+          method="post"
+          data-netlify="true"
+          netlify-honeypot="no-robots-allowed"
+          onSubmit={this.handleSubmit}
+          action="/thanks/"
+        >
+          <input type="hidden" name="form-name" value="contact-form" />
+          <p className="hidden">
+            <label>
+              Do not fill this out:{" "}
+              <input name="no-robots-allowed" onChange={this.handleChange} />
+            </label>
+          </p>
+          <p>
+            Your Name:
+            <br />
+            <input type="text" name="name" onChange={this.handleChange} />
+          </p>
+          <p>
+            Email:
+            <br />
+            <input type="email" name="email" onChange={this.handleChange} />
+          </p>
+          <p>
+            Subject:
+            <br />
+            <input type="text" name="subject" onChange={this.handleChange} />
+          </p>
+          <p>
+            Message:
+            <br />
+            <textarea name="message" onChange={this.handleChange} />
+          </p>
+          <p>
+            <button className="form-btn" type="submit">
+              Submit
+            </button>
+          </p>
+        </form>
+      </div>
+    )
+  }
   // const ContactPageTemplate = ({ data }) => {
   render() {
     const { markdownRemark } = this.props.data
@@ -47,7 +94,19 @@ class ContactPageTemplate extends React.Component {
       <Layout>
         <SEO
           title="Revolver - Contact Us"
-          keywords={[`Revolver`, `Contact`, `Contact Us`, `help`]}
+          keywords={[
+            `Revolver`,
+            `Contact Us`,
+            `Help`,
+            `Music`,
+            `Movies`,
+            `Pop Culture`,
+            `Records`,
+            `CDs`,
+            `Vinyl`,
+            `Trade`,
+            `Sell`,
+          ]}
         />
         {/* <div className="contact-page"> */}
         <ContactBackground className="contact-page">
@@ -55,56 +114,7 @@ class ContactPageTemplate extends React.Component {
             <h1>Contact Us</h1>
             <div dangerouslySetInnerHTML={{ __html: html }} />
           </section>
-          <div className="form-container">
-            <form
-              name="contact-form"
-              method="post"
-              data-netlify="true"
-              netlify-honeypot="no-robots-allowed"
-              onSubmit={this.handleSubmit}
-              action="/thanks/"
-            >
-              <input type="hidden" name="form-name" value="contact-form" />
-              <p className="hidden">
-                <label>
-                  Do not fill this out:{" "}
-                  <input
-                    name="no-robots-allowed"
-                    onChange={this.handleChange}
-                  />
-                </label>
-              </p>
-              <p>
-                Your Name:
-                <br />
-                <input type="text" name="name" onChange={this.handleChange} />
-              </p>
-              <p>
-                Email:
-                <br />
-                <input type="email" name="email" onChange={this.handleChange} />
-              </p>
-              <p>
-                Subject:
-                <br />
-                <input
-                  type="text"
-                  name="subject"
-                  onChange={this.handleChange}
-                />
-              </p>
-              <p>
-                Message:
-                <br />
-                <textarea name="message" onChange={this.handleChange} />
-              </p>
-              <p>
-                <button className="form-btn" type="submit">
-                  Submit
-                </button>
-              </p>
-            </form>
-          </div>
+          <this.ContactForm />
         </ContactBackground>
       </Layout>
     )

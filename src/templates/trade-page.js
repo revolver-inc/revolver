@@ -18,16 +18,6 @@ const TradePageTemplate = ({ data }) => {
   const { html, frontmatter } = markdownRemark
   const { title, tradeFAQ, headingBlurb } = frontmatter
 
-  // const testArr = [1, 2, 3, 4, 5, 6]
-
-  // const testItems = testArr.map((test, i) => {
-  //   return (
-  //     <li key={test}>
-  //       <Accordion title={test} idx={i} content={test} />
-  //     </li>
-  //   )
-  // })
-
   const faqItems = tradeFAQ.map((tradeItem, idx) => {
     return (
       <li key={tradeItem.question}>
@@ -54,6 +44,7 @@ const TradePageTemplate = ({ data }) => {
           `Vinyl`,
           `Records`,
           `Buy`,
+          `CDs`,
         ]}
       />
       <header className="trade-header row">

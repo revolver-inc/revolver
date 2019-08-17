@@ -67,6 +67,9 @@ class IndexPageTemplate extends Component {
               `Pop Culture`,
               `Vinyl`,
               `CDs`,
+              `Trade`,
+              `Sell`,
+              `Records`,
             ]}
           />
           <section className="home-intro">

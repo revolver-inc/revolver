@@ -26,7 +26,21 @@ const LocationsPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Locations" />
+      <SEO
+        title="Revolver - Locations"
+        keywords={[
+          `Revolver`,
+          `Locations`,
+          `Music`,
+          `Movies`,
+          `Pop Culture`,
+          `Records`,
+          `CDs`,
+          `Vinyl`,
+          `Trade`,
+          `Sell`,
+        ]}
+      />
       <div className="locations-page">
         <h1>Locations</h1>
 

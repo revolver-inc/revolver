@@ -24,22 +24,22 @@ const DiscoverPageTemplate = ({ data }) => {
   )
 
   const converter = new showdown.Converter()
-  // const newsHtml = converter.makeHtml(heading)
 
-  // console.log(featuredData)
   return (
     <Layout>
       <SEO
-        title="Revolver - Discover"
+        title="Locations"
         keywords={[
           `Revolver`,
           `Discover`,
-          `Vinyl`,
-          `Movies`,
-          `Merch`,
           `Music`,
+          `Movies`,
+          `Pop Culture`,
           `Records`,
           `CDs`,
+          `Vinyl`,
+          `Trade`,
+          `Sell`,
         ]}
       />
 
