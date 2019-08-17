@@ -3,6 +3,7 @@ module.exports = {
     title: `Revolver`,
     description: `Revolver - Movies, Music and Pop Culture. Your one stop shop for used Vinyl and movie merchandise. We will buy your old records!`,
     author: `@davidfbergeron`,
+    siteURL: `https://revolver-inc.netlify.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -103,6 +104,8 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
     `gatsby-plugin-netlify-cache`,

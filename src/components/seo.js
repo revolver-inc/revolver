@@ -29,7 +29,6 @@ function SEO({ description, lang, meta, title }) {
 
   return (
     <Helmet
-      defer={false}
       htmlAttributes={{
         lang,
       }}
@@ -70,14 +69,15 @@ function SEO({ description, lang, meta, title }) {
         },
       ].concat(meta)}
     >
+      <meta name="description" content={metaDescription} />
+      <meta
+        name="viewport"
+        content="user-scalable=yes, width=device-width, initial-scale=1.0"
+      />
       <link
         // rel="preconnect"
         href="https://use.typekit.net/uga1aiv.css"
         as="style"
-      />
-      <meta
-        name="viewport"
-        content="user-scalable=yes, width=device-width, initial-scale=1.0"
       />
       <meta name="apple-mobile-web-app-capable" content="yes" />
     </Helmet>

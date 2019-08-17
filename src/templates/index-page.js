@@ -85,7 +85,7 @@ class IndexPageTemplate extends Component {
               />
               <div className="action-btns">
                 <Link to="/trade/" className="btn-green btn-home">
-                  Learn More
+                  Trade FAQ
                 </Link>
                 <Link to="/locations/" className="btn-brown btn-home">
                   Find Stores
