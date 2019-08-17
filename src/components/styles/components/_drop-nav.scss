@@ -4,27 +4,32 @@
   height: 30px;
   right: 36px;
   top: 36px;
+  @media screen and (min-width: $screen-md){
+    display: none;
+  }
 }
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: #373a47;
+  background: #111111;
 }
 
 /* Color/shape of burger icon bars on hover*/
 .bm-burger-bars-hover {
-  background: #a90000;
+  background: rgb(233, 195, 90);
 }
 
 /* Position and sizing of clickable cross button */
 .bm-cross-button {
-  height: 24px;
-  width: 24px;
+  height: 36px;
+  width: 36px;
+  margin-top: 54px;
+  margin-right: 25px;
 }
 
 /* Color/shape of close button cross */
 .bm-cross {
-  background: #bdc3c7;
+  background: #c75938;
 }
 
 /*
@@ -38,14 +43,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* General sidebar styles */
 .bm-menu {
-  background: #373a47;
-  padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
-}
-
-/* Morph shape necessary with bubble or elastic */
-.bm-morph-shape {
-  fill: #373a47;
+  background: #cda359;
+  padding: 1rem 1rem;
+  font-size: 1.5em;
+  margin-top: 53px;
 }
 
 /* Wrapper for item list */
@@ -57,6 +58,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Individual item */
 .bm-item {
   display: inline-block;
+  margin-bottom: .5rem;
 }
 
 /* Styling of overlay */
