@@ -17,7 +17,7 @@ const ProductSquare = ({ product }) => {
     <div className="product-square">
       <Link to={`/products/${product.name.toLowerCase()}`}>
         <div className="img-container">
-          <Image name={img} />
+          <Image objectFit="contain" name={img} />
         </div>
         <h4>{title}</h4>
         <h5>{subtitle}</h5>

@@ -45,9 +45,18 @@
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
+
+  button {
+    align-self: center;
+    margin-bottom: .5rem;
+  }
+
   @media screen and (min-width: $screen-md){
     width: 50%;
     text-align: left;
+    button {
+      align-self: flex-start;
+    }
   }
 }
 .map-container {
@@ -58,4 +67,10 @@
     width: 50%;
     max-width: 400px;
   }
+}
+
+.skylight-img-container {
+  max-height: 400px;
+  width: 80%;
+  margin: 0 auto;
 }

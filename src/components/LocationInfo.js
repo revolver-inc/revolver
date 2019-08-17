@@ -3,6 +3,15 @@ import SkyLight from "react-skylight"
 
 import Image from "../components/image"
 
+const interiorMapStyles = {
+  // backgroundColor: "rgba(0, 0, 0, 0.2)",
+  width: "80%",
+  minHeight: "400px",
+  padding: ".25rem",
+  marginTop: "-150px",
+  marginLeft: "-40%",
+  overflow: "hidden",
+}
 class LocationInfo extends React.Component {
   constructor(props) {
     super(props)
@@ -20,13 +29,18 @@ class LocationInfo extends React.Component {
           {location.phoneNumber}
         </p>
         <p>{location.hours}</p>
-        <button onClick={() => this.animated.show()}>View Mall Map</button>
+        <button className="btn-location" onClick={() => this.animated.show()}>
+          View Mall Map
+        </button>
         <SkyLight
           hideOnOverlayClicked
+          dialogStyles={interiorMapStyles}
           ref={ref => (this.animated = ref)}
           transitionDuration={300}
         >
-          <Image name={location.mallImg.relativePath}></Image>
+          <div className="skylight-img-container">
+            <Image name={location.mallImg} objectFit="contain"></Image>
+          </div>
         </SkyLight>
       </div>
     )
