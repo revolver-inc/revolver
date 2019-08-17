@@ -60,7 +60,6 @@
   }
 }
 .map-container {
-  height: 300px;
   border: 1px solid black;
   overflow: hidden;
   @media screen and (min-width:$screen-md){
@@ -70,7 +69,8 @@
 }
 
 .skylight-img-container {
-  max-height: 400px;
-  width: 80%;
-  margin: 0 auto;
+  // max-height: 400px;
+  // width: 80%;
+  margin: auto auto;
+  width: 100%;
 }

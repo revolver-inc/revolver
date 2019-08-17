@@ -14,6 +14,11 @@
   margin-top: .5rem;
   text-decoration: underline;
   margin-bottom: 1.5rem;
+  text-align: center;
+  @media screen and (min-width: $screen-md){
+    margin-left: 2rem;
+    text-align: left;
+  }
   }
 }
 
@@ -26,7 +31,7 @@
   border: 1px solid #979797;
   border-radius: 4px;
   box-shadow: $drop-shadow-alt, $drop-shadow;
-  color: white;
+  color: #eaeaea; 
   background: linear-gradient(#6D5D48, #2F2E2E);
   padding: 1rem 1rem 2.5rem 1rem;
 

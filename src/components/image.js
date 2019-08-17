@@ -9,7 +9,7 @@ const Image = ({ name, objectFit = "cover" }) => (
         allImageSharp {
           edges {
             node {
-              fluid(maxWidth: 1920) {
+              fluid(maxWidth: 1920, quality: 100) {
                 ...GatsbyImageSharpFluid_withWebp
                 originalName
               }

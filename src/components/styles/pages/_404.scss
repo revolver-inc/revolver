@@ -1,0 +1,13 @@
+.container-404 {
+    @media screen and (min-width: $screen-md){
+      display: flex;
+      justify-content: space-between;
+    }
+  .sad-img {
+    width: 50%;
+    img {
+      max-height: 300px;
+    }
+    max-height: 300px;
+      }
+}

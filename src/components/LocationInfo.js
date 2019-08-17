@@ -5,12 +5,16 @@ import Image from "../components/image"
 
 const interiorMapStyles = {
   // backgroundColor: "rgba(0, 0, 0, 0.2)",
-  width: "80%",
+  width: "90%",
   minHeight: "400px",
   padding: ".25rem",
-  marginTop: "-150px",
-  marginLeft: "-40%",
+  marginTop: "-35%",
+  // marginTop: "-150px",
+  marginLeft: "-45%",
   overflow: "hidden",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
 }
 class LocationInfo extends React.Component {
   constructor(props) {
@@ -39,7 +43,7 @@ class LocationInfo extends React.Component {
           transitionDuration={300}
         >
           <div className="skylight-img-container">
-            <Image name={location.mallImg} objectFit="contain"></Image>
+            <Image name={location.mallImg} objectFit="cover"></Image>
           </div>
         </SkyLight>
       </div>
