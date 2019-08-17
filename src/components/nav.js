@@ -21,8 +21,8 @@ const Nav = ({ mobileNav }) => {
           <Link to="/contact">Contact</Link>
         </li>
       </ul>
-      <DropNav className="mobile-view" />
-      {/* <DropMenu className="mobile-view" /> */}
+      {/* <DropNav className="mobile-view" /> */}
+      <DropMenu className="mobile-view" />
     </nav>
   )
 }

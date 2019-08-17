@@ -5,7 +5,7 @@ import { slide as Menu } from "react-burger-menu"
 
 const DropMenu = () => {
   return (
-    <Menu>
+    <Menu right>
       <Link to="/discover">Discover</Link>
       <Link to="/locations">Locations</Link>
       <Link to="/trade">Trade</Link>

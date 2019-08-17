@@ -153,6 +153,12 @@ collections:
         name: "socialMediaLinks"
         fields:
           - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "social-media",
+            }
+          - {
               label: "Show Facebook Social Media Icon",
               name: "showFacebookIcon",
               widget: boolean,
