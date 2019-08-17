@@ -148,10 +148,10 @@ collections:
     identifier_field: name
     delete: false
     files:
-      - label: "Social Media Links"
-      - name: "socialMediaLinks"
       - file: "src/data/socialMedia.json"
-      - fields:
+        label: "Social Media Links"
+        name: "socialMediaLinks"
+        fields:
           - {
               label: "Show Facebook Social Media Icon",
               name: "showFacebookIcon",
