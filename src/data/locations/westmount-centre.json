@@ -1,0 +1,11 @@
+{
+  "city": "Edmonton",
+  "name": "Westmount Centre",
+  "mallImg": "/assets/wm-map.jpg",
+  "hours": "Monday-Friday: 10AM - 9PM\nSaturday: 10AM - 6PM\nSunday: noon - 5PM",
+  "province": "AB",
+  "address": "13310 111 Ave NW",
+  "location": "{\"type\":\"Point\",\"coordinates\":[-113.5540134,53.5610046]}",
+  "phoneNumber": "(780) 488-8262",
+  "postalCode": "T5M 3L7"
+}
