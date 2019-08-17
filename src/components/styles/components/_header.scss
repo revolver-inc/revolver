@@ -37,6 +37,11 @@
       font-family: $font-heading;
       display: flex;
       justify-content: space-between;
+      li {
+        &:hover {
+          color: black;
+        }
+      }
       @media screen and (min-width:320px){
         font-size: 16px;
       }
