@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 
 const ThanksPage = () => (
   <Layout>
-    <SEO title="Revolver - Thanks!" />
+    <SEO title="Thanks! - Revolver" />
     <h1>Thanks for contacting us!</h1>
     <p>We will be in touch with you shortly. </p>
   </Layout>

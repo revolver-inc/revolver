@@ -43,7 +43,7 @@ const ProductPageTemplate = ({ data }) => {
   return (
     <Layout>
       <SEO
-        title={`Revolver | ${title} - ${subtitle}`}
+        title={`${title} - ${subtitle} | Revolver`}
         keywords={[`Revolver`, `${title}`, `${subtitle}`, `${genre}`]}
       />
       <article className="product-page">

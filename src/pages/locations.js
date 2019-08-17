@@ -26,7 +26,7 @@ const LocationsPage = ({ data }) => {
   return (
     <Layout>
       <SEO
-        title="Revolver - Locations"
+        title="Locations - Revolver"
         keywords={[
           `Revolver`,
           `Locations`,

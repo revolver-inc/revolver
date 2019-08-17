@@ -93,7 +93,7 @@ class ContactPageTemplate extends React.Component {
     return (
       <Layout>
         <SEO
-          title="Revolver - Contact Us"
+          title="Contact Us - Revolver"
           keywords={[
             `Revolver`,
             `Contact Us`,

@@ -27,7 +27,7 @@ const DiscoverPageTemplate = ({ data }) => {
   return (
     <Layout>
       <SEO
-        title="Locations"
+        title="Discover - Revolver"
         keywords={[
           `Revolver`,
           `Discover`,

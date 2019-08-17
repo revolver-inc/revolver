@@ -33,7 +33,7 @@ const TradePageTemplate = ({ data }) => {
   return (
     <Layout>
       <SEO
-        title="Revolver - Trade"
+        title="Trade - Revolver"
         keywords={[
           `Revolver`,
           `Music`,
