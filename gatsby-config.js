@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Revolver`,
-    description: `Official Homepage of Revolver Inc.`,
+    description: `Revolver - Movies, Music and Pop Culture. Your one stop shop for used Vinyl and movie merchandise. We will buy your old records!`,
     author: `@davidfbergeron`,
   },
   plugins: [

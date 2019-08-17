@@ -4,24 +4,25 @@ import SkyLight from "react-skylight"
 import Image from "../components/image"
 
 const interiorMapStyles = {
-  // backgroundColor: "rgba(0, 0, 0, 0.2)",
   width: "90%",
   minHeight: "400px",
   padding: ".25rem",
   marginTop: "-35%",
-  // marginTop: "-150px",
   marginLeft: "-45%",
   overflow: "hidden",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
 }
+
+function replaceLineBreaks(str) {
+  return str.replace(/(?:\r\n|\r|\n)/g, "<br>")
+}
+
 class LocationInfo extends React.Component {
-  constructor(props) {
-    super(props)
-  }
   render() {
     const location = this.props.location
+    console.log(location.hours)
     return (
       <div className="location-info">
         <h2>{location.name}</h2>
@@ -32,7 +33,11 @@ class LocationInfo extends React.Component {
           <br />
           {location.phoneNumber}
         </p>
-        <p>{location.hours}</p>
+        <p
+          dangerouslySetInnerHTML={{
+            __html: replaceLineBreaks(location.hours),
+          }}
+        />
         <button className="btn-location" onClick={() => this.animated.show()}>
           View Mall Map
         </button>

@@ -36,7 +36,7 @@ function SEO({ description, lang, meta, title }) {
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
-          name: `description`,
+          name: `Description`,
           content: metaDescription,
         },
         {
@@ -69,7 +69,11 @@ function SEO({ description, lang, meta, title }) {
         },
       ].concat(meta)}
     >
-      <link rel="stylesheet" href="https://use.typekit.net/uga1aiv.css" />
+      <link
+        rel="preconnect"
+        href="https://use.typekit.net/uga1aiv.css"
+        as="style"
+      />
       <meta
         name="viewport"
         content="user-scalable=yes, width=device-width, initial-scale=1.0"

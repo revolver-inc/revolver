@@ -1,10 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import DropNav from "./DropNav"
-import DropMenu from "./DropMenu"
-
-const Nav = ({ mobileNav }) => {
+//  The Drop Menu needs to exist outside of my header component (ugh)
+// So it can be found in Layout.js
+const Nav = () => {
   return (
     <nav className="site-nav">
       <ul className="list-nav">
@@ -21,7 +20,6 @@ const Nav = ({ mobileNav }) => {
           <Link to="/contact">Contact</Link>
         </li>
       </ul>
-      {/* <DropNav className="mobile-view" /> */}
     </nav>
   )
 }

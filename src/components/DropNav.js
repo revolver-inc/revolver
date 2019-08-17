@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
-// import onClickOutside from 'react-onclickoutside';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
 
@@ -14,7 +13,6 @@ class DropNav extends Component {
   }
 
   toggleNav() {
-    console.log("Clicky")
     this.setState(prevState => ({ listOpen: !prevState.listOpen }))
   }
 

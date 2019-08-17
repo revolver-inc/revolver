@@ -1,6 +1,5 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import _ from "lodash"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
@@ -11,8 +10,6 @@ import { cleanProducts } from "../components/SliderData"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPlayCircle } from "@fortawesome/free-solid-svg-icons"
-
-// import BlogRoll from "../components/BlogRoll"
 
 const ProductPageTemplate = ({ data }) => {
   const { markdownRemark, allMarkdownRemark } = data
@@ -28,16 +25,14 @@ const ProductPageTemplate = ({ data }) => {
     tags,
     mediaUrl,
     productImg,
-    productType,
   } = frontmatter
 
   const products = cleanProducts(allMarkdownRemark.edges).filter(
-    prod => prod.name != name
+    prod => prod.name !== name
   )
 
   const tagItems = tags
     .map(tag => {
-      console.log(tag.length)
       if (tag.length > 0) return <li key={tag}>{`#${tag.trim()}`}</li>
       return null
     })

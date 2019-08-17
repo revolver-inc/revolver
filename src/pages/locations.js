@@ -11,7 +11,6 @@ const LocationsPage = ({ data }) => {
 
   const locationList = locations.map((location, idx) => {
     const point = JSON.parse(location.node.location)
-    console.log(location.mallImg)
     return (
       <li key={location.node.phoneNumber} className="location-item">
         <LocationInfo location={location.node} />

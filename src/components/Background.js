@@ -1,13 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
-import styled from "styled-components"
-import { useMediaQuery } from "react-responsive"
 
 import BackgroundImage from "gatsby-background-image"
-
-// const style = {
-//   backgroundSize: "100% 100%, cover, cover",
-// }
 
 const Background = ({ children, className }) => {
   const { stripes, nasty } = useStaticQuery(

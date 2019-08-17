@@ -1,9 +1,8 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
+
 import Image from "./image"
 import showdown from "showdown"
-
-const maxStrLen = 24
 
 export default class FeaturedItem extends Component {
   constructor(props) {
@@ -33,15 +32,14 @@ export default class FeaturedItem extends Component {
 
     if (render) {
       const { product } = this.props
-      const img = product.productImg.relativePath
+      const productImg = product.productImg.relativePath
       const body = this.getProductText(product)
-      const name = product.name
       return (
         <div className="featured-product">
           <div className="product-info">
             <Link to={`/products/${product.name.toLowerCase()}`}>
               <div className="featured-product-img">
-                <Image name={product.productImg.relativePath} />
+                <Image name={productImg} />
               </div>
               <h3>{product.title}</h3>
               <h4>{product.subtitle}</h4>

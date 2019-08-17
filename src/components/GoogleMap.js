@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import GoogleMaps from "simple-react-google-maps"
 
 const GoogleMap = ({ lat, lng, idx }) => {

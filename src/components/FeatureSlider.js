@@ -1,6 +1,4 @@
 import React, { Component } from "react"
-import { Link } from "gatsby"
-import Image from "./image"
 
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"

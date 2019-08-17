@@ -55,14 +55,14 @@ const Footer = () => (
             <ul className="social-icons">
               {socialMedia.showFacebookIcon && (
                 <li>
-                  <a href={socialMedia.facebookURL}>
+                  <a href={socialMedia.facebookURL} title="Facebook Page">
                     <FontAwesomeIcon icon={faFacebookSquare} />
                   </a>
                 </li>
               )}
               {socialMedia.showInstagramIcon && (
                 <li>
-                  <a href={socialMedia.instagramURL}>
+                  <a href={socialMedia.instagramURL} title="Instagram Page">
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
                 </li>
@@ -70,7 +70,10 @@ const Footer = () => (
               {socialMedia.showTwitterIcon && (
                 <li>
                   <a href={socialMedia.twitterURL}>
-                    <FontAwesomeIcon icon={faTwitterSquare} />
+                    <FontAwesomeIcon
+                      icon={faTwitterSquare}
+                      title="Twitter Page"
+                    />
                   </a>
                 </li>
               )}

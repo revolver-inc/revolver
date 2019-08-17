@@ -1,9 +1,8 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import showdown from "showdown"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import FeatureSlider from "../components/FeatureSlider"
 import FeaturedItem from "../components/FeaturedItem"
 import ProductSquare from "../components/ProductSquare"

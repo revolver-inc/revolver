@@ -26,9 +26,9 @@ const Header = ({ siteTitle }) => {
         <div className="row">
           <div className="header-container  col-12 offset-lg-1 col-lg-10">
             <div className="brand-container">
-              <Link to="/">
+              <Link to="/" title="Revolver Home">
                 <h1 className="brand-logo" style={{ margin: 0 }}>
-                  <Img fluid={logoImg} />
+                  <Img fluid={logoImg} alt="Revolver Home" />
                 </h1>
                 <ul className="tag-line">
                   <li>Music</li>
