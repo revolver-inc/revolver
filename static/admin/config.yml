@@ -143,54 +143,54 @@ collections:
       - { label: "Phone Number", name: "phoneNumber", widget: "string" }
       - { label: "Hours", name: "hours", widget: "text" }
 
-  - name: "socialMedia"
-    label: "Social Media"
-    identifier_field: name
-    delete: false
-    files:
-      - label: "Social Media Links"
-      - name: "socialMediaLinks"
-      - file: "src/data/socialMedia.json"
-      - fields:
-          - {
-              label: "Show Facebook Social Media Icon",
-              name: "showFacebookIcon",
-              widget: boolean,
-              default: false,
-              hint: "Choose whether to show the facebook social media icon in the site footer.",
-            }
-          - {
-              label: "Facebook Page URL",
-              name: facebookURL,
-              widget: string,
-              default: "www.facebook.com/",
-            }
-          - {
-              label: "Show Instagram Social Media Icon",
-              name: "showInstagramIcon",
-              widget: boolean,
-              default: false,
-              hint: "Choose whether to show the facebook social media icon in the site footer.",
-            }
-          - {
-              label: "Instagram Page URL",
-              name: instagramURL,
-              widget: string,
-              default: "www.facebook.com/",
-            }
-          - {
-              label: "Show Twitter Social Media Icon",
-              name: "showFacebookIcon",
-              widget: boolean,
-              default: false,
-              hint: "Choose whether to show the facebook social media icon in the site footer.",
-            }
-          - {
-              label: "Twitter Page URL",
-              name: twitterURL,
-              widget: string,
-              default: "www.facebook.com/",
-            }
+  # - name: "socialMedia"
+  #   label: "Social Media"
+  #   identifier_field: name
+  #   delete: false
+  #   files:
+  #     - label: "Social Media Links"
+  #     - name: "socialMediaLinks"
+  #     - file: "src/data/socialMedia.json"
+  #     - fields:
+  #         - {
+  #             label: "Show Facebook Social Media Icon",
+  #             name: "showFacebookIcon",
+  #             widget: boolean,
+  #             default: false,
+  #             hint: "Choose whether to show the facebook social media icon in the site footer.",
+  #           }
+  #         - {
+  #             label: "Facebook Page URL",
+  #             name: facebookURL,
+  #             widget: string,
+  #             default: "www.facebook.com/",
+  #           }
+  #         - {
+  #             label: "Show Instagram Social Media Icon",
+  #             name: "showInstagramIcon",
+  #             widget: boolean,
+  #             default: false,
+  #             hint: "Choose whether to show the facebook social media icon in the site footer.",
+  #           }
+  #         - {
+  #             label: "Instagram Page URL",
+  #             name: instagramURL,
+  #             widget: string,
+  #             default: "www.facebook.com/",
+  #           }
+  #         - {
+  #             label: "Show Twitter Social Media Icon",
+  #             name: "showFacebookIcon",
+  #             widget: boolean,
+  #             default: false,
+  #             hint: "Choose whether to show the facebook social media icon in the site footer.",
+  #           }
+  #         - {
+  #             label: "Twitter Page URL",
+  #             name: twitterURL,
+  #             widget: string,
+  #             default: "www.facebook.com/",
+  #           }
 
   - name: "products"
     label: "Products"
