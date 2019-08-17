@@ -1,1 +1,8 @@
-{}
+{
+  "showFacebookIcon": false,
+  "facebookURL": "www.facebook.com",
+  "showInstagramIcon": false,
+  "instagramURL": "www.instagram.com",
+  "showTwitterIcon": false,
+  "twitterURL": "www.instagram.com"
+}
