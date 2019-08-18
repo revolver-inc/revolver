@@ -15,6 +15,9 @@
 .brand-container a, .brand-container a:visited {
   color: rgb(17, 17, 17);
   text-decoration: none;
+  &:hover {
+    color: rgb(17, 17, 17);
+  }
 }
 
 footer a{
