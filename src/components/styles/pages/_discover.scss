@@ -30,7 +30,7 @@
   flex-direction: column;
   justify-content: center;
   width: 90%;
-  border: 1px solid #979797;
+  // border: 1px solid #979797;
   border-radius: 4px;
   box-shadow: $drop-shadow-alt, $drop-shadow;
   color: #eaeaea; 
@@ -122,5 +122,17 @@
   @media screen and (min-width: $screen-md){
     width: 50%;
    
+  }
+}
+
+.discover-slider {
+  margin: 0 auto;
+  max-width: 85%;
+  padding-bottom: 3rem;
+  @media screen and (min-width: 576px){
+    max-width: 100%;
+  }
+  .product-square {
+    margin: 0 auto;
   }
 }
