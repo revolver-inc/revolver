@@ -48,6 +48,7 @@ class ContactPageTemplate extends React.Component {
           netlify-honeypot="no-robots-allowed"
           onSubmit={this.handleSubmit}
           action="/thanks/"
+          netlify
         >
           <input type="hidden" name="form-name" value="contact-form" />
           <p className="hidden">
