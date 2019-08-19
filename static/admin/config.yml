@@ -143,7 +143,6 @@ collections:
       - { label: "Phone Number", name: "phoneNumber", widget: "string" }
       - { label: "Hours", name: "hours", widget: "text" }
 
-
   - name: "products"
     label: "Products"
     identifier_field: name
@@ -354,15 +353,20 @@ collections:
       - file: "src/data/settings.json"
         label: "General Settings"
         name: generalSettings
-        - fields:
-          - {label: "Template Key", name: "templateKey", widget: hidden, default: "site-settings"}
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: hidden,
+              default: "site-settings",
+            }
           - {
               label: "Store URL",
               name: storeURL,
               widget: string,
               default: "https://store.revolver-inc.ca",
-              hint: "Modify this value to point the revolver store (If you have one)."
-            } 
+              hint: "Modify this value to point the revolver store (If you have one).",
+            }
           - {
               label: "Enable Store",
               name: "storeIsEnabled",
@@ -420,5 +424,3 @@ collections:
               widget: string,
               default: "www.twitter.com/",
             }
-
-
