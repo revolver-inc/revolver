@@ -42,18 +42,18 @@ class ContactPageTemplate extends React.Component {
     return (
       <div className="form-container">
         <form
-          name="the-contact-form"
-          method="POST"
-          data-netlify="true"
-          data-netlify-honeypot="no-robots-allowed"
-          onSubmit={this.handleSubmit}
+          name="contact"
+          method="post"
           action="/thanks/"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          onSubmit={this.handleSubmit}
         >
-          <input type="hidden" name="form-name" value="the-contact-form" />
+          <input type="hidden" name="form-name" value="contact" />
           <p className="hidden">
             <label>
               Do not fill this out:{" "}
-              <input name="no-robots-allowed" onChange={this.handleChange} />
+              <input name="bot-field" onChange={this.handleChange} />
             </label>
           </p>
           <p>
