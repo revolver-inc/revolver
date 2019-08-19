@@ -1,7 +1,7 @@
 {
   "templateKey": "social-media",
   "showFacebookIcon": true,
-  "facebookURL": "www.facebook.com",
+  "facebookURL": "https://www.facebook.com",
   "showInstagramIcon": false,
   "instagramURL": "www.instagram.com",
   "showTwitterIcon": false,

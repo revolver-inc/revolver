@@ -22,7 +22,6 @@ function replaceLineBreaks(str) {
 class LocationInfo extends React.Component {
   render() {
     const location = this.props.location
-    console.log(location.hours)
     return (
       <div className="location-info">
         <h2>{location.name}</h2>

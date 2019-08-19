@@ -5,7 +5,7 @@ import Image from "./image"
 import Img from "gatsby-image"
 import Nav from "./nav"
 
-const Header = ({ siteTitle }) => {
+const Header = ({ siteTitle, settings }) => {
   const { logo } = useStaticQuery(
     graphql`
       query {
@@ -37,7 +37,7 @@ const Header = ({ siteTitle }) => {
                 </ul>
               </Link>
             </div>
-            <Nav />
+            <Nav settings={settings} />
             <div className="turn-table">
               <Image name="turn-table.png" />
             </div>
