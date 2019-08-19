@@ -116,7 +116,7 @@ module.exports = {
     //     // Setting this parameter is also optional
     //     respectDNT: true,
     //     // Avoids sending pageview hits from custom paths
-    //     // exclude: ["/preview/**", "/do-not-track/me/too/"],
+    //     // exceude: ["/preview/**", "/do-not-track/me/too/"],
     //     // Delays sending pageview hits on route update (in milliseconds)
     //     pageTransitionDelay: 0,
     //     // Enables Google Optimize using your container Id
@@ -133,6 +133,6 @@ module.exports = {
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
-    `gatsby-plugin-netlify-cache`,
+    // `gatsby-plugin-netlify-cache`,
   ],
 }
