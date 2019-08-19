@@ -9,7 +9,7 @@ in touch with me (David Bergeron) @ david.f.bergeron@gmail.com.
 If it is an emergency I can be reached by phone:
 780-691-4837
 
-#Brief Tech rundown:
+##Brief Tech rundown:
 
 This website runs off of a technology called Gatsby and React.
 
