@@ -18,11 +18,15 @@ import "./styles/main.scss"
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
-      query SiteTitleQuery {
+      query SiteSettingsQuery {
         site {
           siteMetadata {
             title
           }
+        }
+        settings: dataJson(templateKey: { eq: "site-settings" }) {
+          storeIsEnabled
+          storeURL
         }
       }
     `}
@@ -31,8 +35,11 @@ const Layout = ({ children }) => (
         {/* I hate to do this but the menu has to exist out side of the Header
             Thank safari for that one.
         */}
-        <DropMenu className="mobile-view" />
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <DropMenu className="mobile-view" settings={data.settings} />
+        <Header
+          siteTitle={data.site.siteMetadata.title}
+          settings={data.settings}
+        />
         <ResponsiveBackground>
           <div className="container">
             <div className="row">
@@ -40,7 +47,7 @@ const Layout = ({ children }) => (
             </div>
           </div>
         </ResponsiveBackground>
-        <Footer />
+        <Footer settings={data.settings} />
       </>
     )}
   />

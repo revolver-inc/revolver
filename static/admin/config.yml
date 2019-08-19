@@ -143,60 +143,6 @@ collections:
       - { label: "Phone Number", name: "phoneNumber", widget: "string" }
       - { label: "Hours", name: "hours", widget: "text" }
 
-  - name: "socialMedia"
-    label: "Social Media"
-    identifier_field: name
-    delete: false
-    files:
-      - file: "src/data/socialMedia.json"
-        label: "Social Media Links"
-        name: "socialMediaLinks"
-        fields:
-          - {
-              label: "Template Key",
-              name: "templateKey",
-              widget: "hidden",
-              default: "social-media",
-            }
-          - {
-              label: "Show Facebook Social Media Icon",
-              name: "showFacebookIcon",
-              widget: boolean,
-              default: false,
-              hint: "Choose whether to show the facebook social media icon in the site footer.",
-            }
-          - {
-              label: "Facebook Page URL",
-              name: facebookURL,
-              widget: string,
-              default: "www.facebook.com/",
-            }
-          - {
-              label: "Show Instagram Social Media Icon",
-              name: "showInstagramIcon",
-              widget: boolean,
-              default: false,
-              hint: "Choose whether to show the facebook social media icon in the site footer.",
-            }
-          - {
-              label: "Instagram Page URL",
-              name: instagramURL,
-              widget: string,
-              default: "www.instagram.com/",
-            }
-          - {
-              label: "Show Twitter Social Media Icon",
-              name: "showTwitterIcon",
-              widget: boolean,
-              default: false,
-              hint: "Choose whether to show the facebook social media icon in the site footer.",
-            }
-          - {
-              label: "Twitter Page URL",
-              name: twitterURL,
-              widget: string,
-              default: "www.twitter.com/",
-            }
 
   - name: "products"
     label: "Products"
@@ -399,3 +345,80 @@ collections:
                   required: false,
                   description: "Blurb to describe product, used on feature pages. If no blurb provided, one is generated from the product description",
                 }
+
+  - label: "Site Settings"
+    name: "siteSettings"
+    identifier_field: name
+    delete: false
+    files:
+      - file: "src/data/settings.json"
+        label: "General Settings"
+        name: generalSettings
+        - fields:
+          - {label: "Template Key", name: "templateKey", widget: hidden, default: "site-settings"}
+          - {
+              label: "Store URL",
+              name: storeURL,
+              widget: string,
+              default: "https://store.revolver-inc.ca",
+              hint: "Modify this value to point the revolver store (If you have one)."
+            } 
+          - {
+              label: "Enable Store",
+              name: "storeIsEnabled",
+              widget: boolean,
+              default: false,
+              hint: "Adds a link to the store to the website's navigation menus.",
+            }
+
+      - file: "src/data/socialMedia.json"
+        label: "Social Media Links"
+        name: "socialMediaLinks"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "social-media",
+            }
+          - {
+              label: "Show Facebook Social Media Icon",
+              name: "showFacebookIcon",
+              widget: boolean,
+              default: false,
+              hint: "Choose whether to show the facebook social media icon in the site footer.",
+            }
+          - {
+              label: "Facebook Page URL",
+              name: facebookURL,
+              widget: string,
+              default: "www.facebook.com/",
+            }
+          - {
+              label: "Show Instagram Social Media Icon",
+              name: "showInstagramIcon",
+              widget: boolean,
+              default: false,
+              hint: "Choose whether to show the facebook social media icon in the site footer.",
+            }
+          - {
+              label: "Instagram Page URL",
+              name: instagramURL,
+              widget: string,
+              default: "www.instagram.com/",
+            }
+          - {
+              label: "Show Twitter Social Media Icon",
+              name: "showTwitterIcon",
+              widget: boolean,
+              default: false,
+              hint: "Choose whether to show the facebook social media icon in the site footer.",
+            }
+          - {
+              label: "Twitter Page URL",
+              name: twitterURL,
+              widget: string,
+              default: "www.twitter.com/",
+            }
+
+

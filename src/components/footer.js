@@ -9,7 +9,7 @@ import {
   faTwitterSquare,
 } from "@fortawesome/free-brands-svg-icons"
 
-const Footer = () => (
+const Footer = ({ settings }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -51,6 +51,7 @@ const Footer = () => (
               <li>
                 <Link to="/contact/">Contact</Link>
               </li>
+              {settings.storeIsEnabled && <a href={settings.storeURL}>Store</a>}
             </ul>
             <ul className="social-icons">
               {socialMedia.showFacebookIcon && (
