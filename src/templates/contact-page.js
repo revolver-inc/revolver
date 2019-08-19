@@ -43,7 +43,7 @@ class ContactPageTemplate extends React.Component {
       <div className="form-container">
         <form
           name="contact-form"
-          method="post"
+          method="POST"
           data-netlify="true"
           netlify-honeypot="no-robots-allowed"
           onSubmit={this.handleSubmit}
