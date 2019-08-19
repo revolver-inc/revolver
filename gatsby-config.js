@@ -125,7 +125,7 @@ module.exports = {
     //   },
     // },
     // `gatsby-plugin-robots-txt`,
-    `gatsby-plugin-remove-service-worker`,
+    `gatsby-plugin-remove-serviceworker`,
     // `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
     // `gatsby-plugin-netlify-cache`,
