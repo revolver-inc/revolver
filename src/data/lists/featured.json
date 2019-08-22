@@ -1,6 +1,15 @@
 {
   "featuredList": [
     {
+      "product": "music-theforeshadowing-secondworld-cd-2012"
+    },
+    {
+      "product": "music-weezer-pinkerton-vinyl-4lp"
+    },
+    {
+      "product": "movie-ghostship-2002"
+    },
+    {
       "product": "music-eiffel65-europop"
     },
     {
@@ -20,15 +29,6 @@
     },
     {
       "product": "music-discountlionsafari-odditiesandplantforms"
-    },
-    {
-      "product": "movie-ghostship-2002"
-    },
-    {
-      "product": "music-weezer-pinkerton-vinyl-4lp"
-    },
-    {
-      "product": "music-theforeshadowing-secondworld-cd-2012"
     }
   ]
 }
