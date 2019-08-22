@@ -12,11 +12,12 @@ intro:
 
     **We buy old records, cd’s and movies!**
 news:
-  body: >-
-    From August 1-7, come on down, this week only for a limited time blu-ray
-    promotion! We’ve got so many blu-rays! Bring a friend. Buy more blu-rays!
-  newsHeading: Two-for-One Blu-ray - This week only!
-  newsImage: /assets/blu_ray_sale.jpg
+  body: |-
+    All CDs priced at $7.99 or less are 3/$19.99
+
+    All DVDs and Blu-Rays priced at $7.99 or less are 4/$19.99
+  newsHeading: Everyday Deal!
+  newsImage: /assets/dvds-1.jpg
   newsIsVisible: true
 ---
 
