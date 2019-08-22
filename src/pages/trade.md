@@ -10,6 +10,11 @@ tradeFAQ:
     question: How do trades work?
   - answer: '**NO.** Credit at Revolver lasts forever.'
     question: Is there an expiry date on my credit?
+  - answer: >-
+      Yes we do! However, cash payouts are lower than in-store credit. So if you
+      shop regularly with us, we recommend going with the in-store credit
+      option.
+    question: Do you give cash?
 ---
 
 All trades are final!
