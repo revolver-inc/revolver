@@ -1,5 +1,6 @@
 {
-  "localList": [{
+  "localList": [
+    {
       "product": "music-arcadefire-funeral"
     },
     {
@@ -10,6 +11,9 @@
     },
     {
       "product": "music-discountlionsafari-odditiesandplantforms"
+    },
+    {
+      "product": "music-faunts-highexpectlowresults-cd"
     }
   ]
 }
