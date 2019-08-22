@@ -11,10 +11,10 @@ tradeFAQ:
   - answer: '**NO.** Credit at Revolver lasts forever.'
     question: Is there an expiry date on my credit?
   - answer: >-
-      Yes we do! However, cash payouts are lower than in-store credit. So if you
-      shop regularly with us, we recommend going with the in-store credit
-      option.
-    question: Do you give cash?
+      No, unfortunately we have to be quite selective in what we take. You would
+      bring your collection down and our staff would go through what you have
+      and select the items we are interested in.
+    question: Do you buy entire collections?
 ---
 
 All trades are final!
