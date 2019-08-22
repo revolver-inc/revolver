@@ -9,7 +9,7 @@ isLocal: false
 condition: 4 LP Vinyl
 mediaUrl: ' https://youtu.be/okthJIVbi6g'
 useBlurb: false
-blurb: ''
+blurb: Rare 4 LP 180 gram Vinyl in stock at our Bonnie Doon location
 tags:
   - music
   - vinyl
