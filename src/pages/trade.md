@@ -15,6 +15,11 @@ tradeFAQ:
       bring your collection down and our staff would go through what you have
       and select the items we are interested in.
     question: Do you buy entire collections?
+  - answer: >-
+      No, BUT, we highly recommend calling ahead on the day your are planning to
+      bring your items to ensure that we are able to go through them, and/or
+      that we are able to do a cash payout, if preferred.
+    question: Do I need an appointment?
 ---
 
 All trades are final!
