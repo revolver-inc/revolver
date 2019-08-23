@@ -14,9 +14,9 @@ tags:
   - Music
   - Metal
   - Doom
-  - Doom Metal
-  - Melodic Doom
-  - Heavy Metal
+  - DoomMetal
+  - MelodicDoom
+  - HeavyMetal
 name: music-theforeshadowing-secondworld-cd-2012
 id: 1dcd12e2-fdbb-4629-b07f-e11ba1fe06e0
 ---
