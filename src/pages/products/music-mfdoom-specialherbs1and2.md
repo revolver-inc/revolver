@@ -4,7 +4,7 @@ productType: MUSIC
 title: MF Doom
 subtitle: Special Herbs Volume 1 & 2
 genre: Hip-Hop
-productImg: /assets/arcade-fire.jpg
+productImg: /assets/mfdoomspecialherbs1and2.jpeg
 year: 2001
 isLocal: false
 condition: CD(Used)

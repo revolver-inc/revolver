@@ -11,6 +11,10 @@ import { cleanProducts } from "../components/SliderData"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPlayCircle } from "@fortawesome/free-solid-svg-icons"
 
+function removeWhiteSpace(str) {
+  return str.replace(/\s+/g, "")
+}
+
 const ProductPageTemplate = ({ data }) => {
   const { markdownRemark, allMarkdownRemark } = data
   const { html, frontmatter } = markdownRemark
@@ -33,7 +37,8 @@ const ProductPageTemplate = ({ data }) => {
 
   const tagItems = tags
     .map(tag => {
-      if (tag.length > 0) return <li key={tag}>{`#${tag.trim()}`}</li>
+      if (tag.length > 0)
+        return <li key={tag}>{`#${removeWhiteSpace(tag)}`}</li>
       return null
     })
     .filter(elt => elt !== undefined)
@@ -47,51 +52,53 @@ const ProductPageTemplate = ({ data }) => {
         keywords={[`Revolver`, `${title}`, `${subtitle}`, `${genre}`]}
       />
       <article className="product-page">
-        <div className="product-info-container col-md-5">
-          <header>
-            <h1>{title}</h1>
-            <h2>
-              {subtitle}
-              {year && ` (${year})`}
-            </h2>
-            <p className="product-genre">{genre}</p>
-          </header>
-          <div className="product-media">
-            <div className="product-img">
-              <Image name={productImg.relativePath} />
-              {mediaUrl && (
-                <a
-                  className="btn-media"
-                  href={mediaUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FontAwesomeIcon
-                    icon={faPlayCircle}
-                    size="5x"
-                    className="media-icon"
-                  />
-                </a>
+        <h1>{title}</h1>
+        <div className="product-container">
+          <div className="product-info-container col-md-5">
+            <header>
+              <h2>
+                {subtitle}
+                {year && ` (${year})`}
+              </h2>
+              <p className="product-genre">{genre}</p>
+            </header>
+            <div className="product-media">
+              <div className="product-img">
+                <Image name={productImg.relativePath} />
+                {mediaUrl && (
+                  <a
+                    className="btn-media"
+                    href={mediaUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FontAwesomeIcon
+                      icon={faPlayCircle}
+                      size="5x"
+                      className="media-icon"
+                    />
+                  </a>
+                )}
+              </div>
+            </div>
+            <div className="product-details">
+              {condition && <p className="product-condition">{condition}</p>}
+              {isLocal && <p className="product-local-status">Local</p>}
+              {tags && (
+                <ul className="tag-list">
+                  <span>Tags: </span>
+                  {tagItems}
+                </ul>
               )}
             </div>
           </div>
-          <div className="product-details">
-            {condition && <p className="product-condition">{condition}</p>}
-            {isLocal && <p className="product-local-status">Local</p>}
-            {tags && (
-              <ul className="tag-list">
-                <span>Tags: </span>
-                {tagItems}
-              </ul>
-            )}
-          </div>
-        </div>
-        <div className="product-content col-md-7">
-          <div className="body">
-            <div dangerouslySetInnerHTML={{ __html: html }} />
-            <Link to="/locations" className="btn-brown">
-              Find Stores
-            </Link>
+          <div className="product-content col-md-7">
+            <div className="body">
+              <div dangerouslySetInnerHTML={{ __html: html }} />
+              <Link to="/locations" className="btn-brown">
+                Find Stores
+              </Link>
+            </div>
           </div>
         </div>
       </article>

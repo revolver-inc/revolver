@@ -39,7 +39,7 @@ export default class FeaturedItem extends Component {
           <div className="product-info">
             <Link to={`/products/${product.name.toLowerCase()}`}>
               <div className="featured-product-img">
-                <Image name={productImg} />
+                <Image name={productImg} objectFit="contain" />
               </div>
               <h3>{product.title}</h3>
               <h4>{product.subtitle}</h4>
