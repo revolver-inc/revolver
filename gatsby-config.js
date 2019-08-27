@@ -108,7 +108,7 @@ module.exports = {
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
     //   options: {
-    //     trackingId: "YOUR_GOOGLE_ANALYTICS_TRACKING_ID",
+    //     trackingId: process.env.GATSBY_GOOGLE_ANALYTICS,
     //     // Defines where to place the tracking script - `true` in the head and `false` in the body
     //     head: false,
     //     // Setting this parameter is optional

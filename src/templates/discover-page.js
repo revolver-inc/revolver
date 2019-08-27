@@ -22,6 +22,8 @@ const DiscoverPageTemplate = ({ data }) => {
     rawProductLists
   )
 
+  const imgData = featuredData.map(product => product.productImg.relativePath)
+
   const converter = new showdown.Converter()
 
   return (
@@ -50,7 +52,7 @@ const DiscoverPageTemplate = ({ data }) => {
       <section className="discover-featured">
         <div className="main-slider-container">
           <h2>Featured Items</h2>
-          <FeatureSlider>
+          <FeatureSlider imgArr={imgData}>
             {featuredData.map(product => (
               <FeaturedItem
                 key={product.name}
