@@ -47,7 +47,47 @@ tradeFAQ:
       No, unfortunately once the trade is complete we cannot exchange credit for
       cash.
     question: Can I exchange my Credit for Cash at a later date?
-  - answer: "We give different amounts depending on the type of item you bring in.\n\n## Movies:\r\n\n* \r**DVD** - $0.50 Cash **_or_** $1.50 Credit\r\n* \r**Blu-ray** - $1.00 Cash **_or_** $3.00 Credit\r\n* \r**4K/3D Blu-ray** - $2.00 Cash _or_ $6.00 Credit\r\n* \r**Anything particularly rare/expensive** – 25% of sell price Cash **_or_** 50% of sell price Credit\r\n* \r**Box Sets** - 25% of sell price Cash _**or**_ 50% of sell price Credit\r\n\n## TV:\r\n\n* \r**DVD** - 25% of sell price Cash _**or**_ 50% of sell price Credit\r\n* \r**Blu-ray** - 25% of sell price Cash _**or**_ 50% of sell price Credit\r\n\n## Music:\r\n\n* **CD** - $1.00 Cash _**or**_ $3.00 Credit\r\n* \r**Double CD** - $2.00 Cash **_or_** $6.00 Credit\r\n* \r**CD Box Sets** - 25% of sell price Cash _**or**_ 50% of sell price Credit\r\n* \r**Vinyl** - 25% of sell price Cash _**or**_ 50% of sell price Credit\r\n* \r**Vinyl Box Sets** - 25% of sell price Cash _**or**_ 50% of sell price Credit"
+  - answer: >-
+      We give different amounts depending on the type of item you bring in.
+
+
+      ## Movies:
+
+
+      * **DVD** - $0.50 Cash _**or**_ $1.50 Credit
+
+      * **Blu-ray** - $1.00 Cash _**or**_ $3.00 Credit
+
+      * **4K/3D Blu-ray** - $2.00 Cash _or_ $6.00 Credit
+
+      * **Anything particularly rare/expensive** – 25% of sell price Cash
+      _**or**_ 50% of sell price Credit
+
+      * **Box Sets** - 25% of sell price Cash **_or_** 50% of sell price Credit
+
+
+      ## TV:
+
+
+      * **DVD** - 25% of sell price Cash **_or_** 50% of sell price Credit
+
+      * **Blu-ray** - 25% of sell price Cash **_or_** 50% of sell price Credit
+
+
+      ## Music:
+
+
+      * **CD** - $1.00 Cash **_or_** $3.00 Credit
+
+      * **Double CD** - $2.00 Cash _**or**_ $6.00 Credit
+
+      * **CD Box Sets** - 25% of sell price Cash **_or_** 50% of sell price
+      Credit
+
+      * **Vinyl** - 25% of sell price Cash **_or_** 50% of sell price Credit
+
+      * **Vinyl Box Sets** - 25% of sell price Cash **_or_** 50% of sell price
+      Credit
     question: How much do I get?
   - answer: 'No, we do not take Board Games, Books or Comics.'
     question: 'Do you take in Board Games, Books or Comics?'
