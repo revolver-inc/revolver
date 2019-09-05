@@ -41,5 +41,11 @@ tradeFAQ:
       In order for us to issue credit or do a cash payout for any items that you
       wish to sell us you need to be at least 18 years of age.
     question: How old do I have to be to trade in my items?
+  - answer: Credit can be used to purchase anything in our stores.
+    question: What can I purchase with credit?
+  - answer: >-
+      No, unfortunately once the trade is complete we cannot exchange credit for
+      cash.
+    question: Can I exchange my Credit for Cash at a later date?
 ---
 All trades are final!
