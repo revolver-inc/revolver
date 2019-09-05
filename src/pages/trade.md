@@ -31,5 +31,15 @@ tradeFAQ:
       to buy from you. We may say no to something on a list that we do not know
       is actually something rare and valuable.
     question: Should I bring in a list of what I have?
+  - answer: >-
+      **YES.** Credit issued at any Revolver can be used freely between
+      locations.
+    question: Can I use my credit at a different location from which it was issued?
+  - answer: 'Yes. We ask that you bring in a valid, government issued photo ID.'
+    question: Do I need ID to trade my items?
+  - answer: >-
+      In order for us to issue credit or do a cash payout for any items that you
+      wish to sell us you need to be at least 18 years of age.
+    question: How old do I have to be to trade in my items?
 ---
 All trades are final!
