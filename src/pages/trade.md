@@ -60,7 +60,7 @@ tradeFAQ:
 
       * **4K/3D Blu-ray** - $2.00 Cash _or_ $6.00 Credit
 
-      * **Anything particularly rare/expensive** – 25% of sell price Cash
+      * **Anything particularly rare/expensive** - 25% of sell price Cash
       _**or**_ 50% of sell price Credit
 
       * **Box Sets** - 25% of sell price Cash **_or_** 50% of sell price Credit
