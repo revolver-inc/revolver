@@ -12,9 +12,9 @@ mediaUrl: 'https://www.youtube.com/watch?v=aZNt7i1TJgQ'
 useBlurb: false
 blurb: This is a blurb we could use... if we wanted to.
 tags:
-  - Rock
-  - Guitars
-  - Kurt Cobain
+  - Hip-hop
+  - MF Doom
+  - Instrumental
 name: music-mfdoom-specialherbs1and2
 id: 59f47f8c-c6af-4c01-bd04-f888d6ba0d86
 ---
